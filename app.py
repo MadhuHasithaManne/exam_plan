@@ -541,69 +541,144 @@ def generate_attendance_sheets():
         print(f"All attendance sheets have been zipped: {zip_filename}")
 
 
+        # zip_file_path = os.path.join(output_dir, "attendance_sheets.zip")  # ZIP file path
+        # extract_dir = os.path.join(output_dir, "extracted_excels")  # Folder for extracted Excel files
+        # pdf_output_dir = os.path.join(output_dir, "pdfs")  # Folder for generated PDFs
+        # pdf_zip_path = os.path.join(output_dir, "converted_pdfs.zip")  # Final ZIP file for PDFs
+
+        # # Ensure necessary directories exist
+        # os.makedirs(extract_dir, exist_ok=True)
+        # os.makedirs(pdf_output_dir, exist_ok=True)
+
+        # # Step 1: Extract ZIP file
+        # with zipfile.ZipFile(zip_file_path, "r") as zip_ref:
+        #     zip_ref.extractall(extract_dir)
+
+    
+        # pythoncom.CoInitialize()
+        # excel = win32com.client.Dispatch("Excel.Application")
+        # excel.Visible = False  # Keep Excel hidden
+        # excel.DisplayAlerts = False  # Prevent pop-ups
+        # excel.ScreenUpdating = False
+
+        # for filename in os.listdir(extract_dir):
+        #     if filename.endswith(".xlsx") or filename.endswith(".xls"):
+        #         excel_path = os.path.join(extract_dir, filename)
+
+        #         # Open the workbook
+        #         try:
+        #             workbook = excel.Workbooks.Open(excel_path)
+        #             if workbook is None:
+        #                 print(f"Skipping {filename}, could not open.")
+        #                 continue  # Skip if workbook is invalid
+
+        #             # Convert each sheet to a separate PDF
+        #             for sheet in workbook.Sheets:
+        #                 pdf_path = os.path.join(pdf_output_dir, f"{filename.replace('.xlsx', '').replace('.xls', '')}_{sheet.Name}.pdf")
+                        
+        #                 # Set page to fit A4
+        #                 sheet.PageSetup.Zoom = False  # Disable zoom
+        #                 sheet.PageSetup.FitToPagesWide = 1  # Fit width to one page
+        #                 sheet.PageSetup.FitToPagesTall = 1  # Fit height to one page
+        #                 sheet.PageSetup.Orientation = 1  # Landscape (1 for Portrait)
+                        
+        #                 # Export as PDF
+        #                 sheet.ExportAsFixedFormat(0, pdf_path)
+
+        #             workbook.Close(False) 
+
+        #         except Exception as e:
+        #             print(f"Error processing {filename}: {e}")
+
+        # # Quit Excel application
+        # excel.Quit()
+        # pythoncom.CoUninitialize()
+
+        # # Step 4: Zip all PDFs
+        # with zipfile.ZipFile(pdf_zip_path, "w", zipfile.ZIP_DEFLATED) as zipf:
+        #     for pdf_file in os.listdir(pdf_output_dir):
+        #         pdf_path = os.path.join(pdf_output_dir, pdf_file)
+        #         zipf.write(pdf_path, os.path.basename(pdf_path))
+
+        # # Optional: Clean up extracted Excel files
+        # shutil.rmtree(extract_dir)
+        # shutil.rmtree(pdf_output_dir)
+        def convert_excel_to_pdf(input_path, output_path):
+            """ Converts an Excel file to PDF while ensuring A4 page setup. Works on Windows & Linux. """
+            system_platform = platform.system()
+
+            if system_platform == "Windows":
+                import pythoncom
+                import win32com.client
+                
+                pythoncom.CoInitialize()
+                excel = win32com.client.Dispatch("Excel.Application")
+                excel.Visible = False  # Keep Excel hidden
+                excel.DisplayAlerts = False  # Prevent pop-ups
+
+                try:
+                    workbook = excel.Workbooks.Open(input_path)
+                    if workbook:
+                        for sheet in workbook.Sheets:
+                            pdf_path = os.path.join(output_path, f"{os.path.basename(input_path).replace('.xlsx', '').replace('.xls', '')}_{sheet.Name}.pdf")
+
+                            # ✅ Ensure A4 Page Setup
+                            sheet.PageSetup.Zoom = False  # Disable zoom
+                            sheet.PageSetup.FitToPagesWide = 1  # Fit width to one page
+                            sheet.PageSetup.FitToPagesTall = 1  # Fit height to one page
+                            sheet.PageSetup.Orientation = 1  # Landscape (1 for Portrait)
+
+                            # ✅ Export as PDF
+                            sheet.ExportAsFixedFormat(0, pdf_path)
+
+                        workbook.Close(False)
+
+                except Exception as e:
+                    print(f"Error processing {input_path}: {e}")
+
+                finally:
+                    excel.Quit()
+                    pythoncom.CoUninitialize()
+
+            else:
+                # ✅ Linux/macOS: Use LibreOffice for PDF conversion
+                try:
+                    subprocess.run([
+                        "libreoffice", "--headless", "--convert-to", "pdf", "--outdir",
+                        output_path, input_path
+                    ], check=True)
+
+                except subprocess.CalledProcessError as e:
+                    print(f"LibreOffice conversion failed for {input_path}: {e}")
+
         zip_file_path = os.path.join(output_dir, "attendance_sheets.zip")  # ZIP file path
         extract_dir = os.path.join(output_dir, "extracted_excels")  # Folder for extracted Excel files
         pdf_output_dir = os.path.join(output_dir, "pdfs")  # Folder for generated PDFs
         pdf_zip_path = os.path.join(output_dir, "converted_pdfs.zip")  # Final ZIP file for PDFs
 
-        # Ensure necessary directories exist
+            # ✅ Ensure necessary directories exist
         os.makedirs(extract_dir, exist_ok=True)
         os.makedirs(pdf_output_dir, exist_ok=True)
 
-        # Step 1: Extract ZIP file
+            # ✅ Step 1: Extract ZIP file
         with zipfile.ZipFile(zip_file_path, "r") as zip_ref:
             zip_ref.extractall(extract_dir)
 
-    
-        pythoncom.CoInitialize()
-        excel = win32com.client.Dispatch("Excel.Application")
-        excel.Visible = False  # Keep Excel hidden
-        excel.DisplayAlerts = False  # Prevent pop-ups
-        excel.ScreenUpdating = False
-
+            # ✅ Step 2: Convert each Excel file to PDF
         for filename in os.listdir(extract_dir):
             if filename.endswith(".xlsx") or filename.endswith(".xls"):
                 excel_path = os.path.join(extract_dir, filename)
+                convert_excel_to_pdf(excel_path, pdf_output_dir)
 
-                # Open the workbook
-                try:
-                    workbook = excel.Workbooks.Open(excel_path)
-                    if workbook is None:
-                        print(f"Skipping {filename}, could not open.")
-                        continue  # Skip if workbook is invalid
-
-                    # Convert each sheet to a separate PDF
-                    for sheet in workbook.Sheets:
-                        pdf_path = os.path.join(pdf_output_dir, f"{filename.replace('.xlsx', '').replace('.xls', '')}_{sheet.Name}.pdf")
-                        
-                        # Set page to fit A4
-                        sheet.PageSetup.Zoom = False  # Disable zoom
-                        sheet.PageSetup.FitToPagesWide = 1  # Fit width to one page
-                        sheet.PageSetup.FitToPagesTall = 1  # Fit height to one page
-                        sheet.PageSetup.Orientation = 1  # Landscape (1 for Portrait)
-                        
-                        # Export as PDF
-                        sheet.ExportAsFixedFormat(0, pdf_path)
-
-                    workbook.Close(False) 
-
-                except Exception as e:
-                    print(f"Error processing {filename}: {e}")
-
-        # Quit Excel application
-        excel.Quit()
-        pythoncom.CoUninitialize()
-
-        # Step 4: Zip all PDFs
+            # ✅ Step 3: Zip all PDFs
         with zipfile.ZipFile(pdf_zip_path, "w", zipfile.ZIP_DEFLATED) as zipf:
             for pdf_file in os.listdir(pdf_output_dir):
                 pdf_path = os.path.join(pdf_output_dir, pdf_file)
                 zipf.write(pdf_path, os.path.basename(pdf_path))
 
-        # Optional: Clean up extracted Excel files
+            # ✅ Step 4: Clean up extracted Excel files
         shutil.rmtree(extract_dir)
         shutil.rmtree(pdf_output_dir)
-        
 
 
         print(f"All Excel sheets converted to PDFs and saved in: {pdf_zip_path}")
