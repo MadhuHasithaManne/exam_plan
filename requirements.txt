@@ -7,3 +7,9 @@ openpyxl
 zipfile36
 reportlab
 pywin32 ; sys_platform == 'win32'
+shutil
+platform
+subprocess-run
+python-dotenv
+requests
+libreoffice ; sys_platform != 'win32' 
