@@ -8,10 +8,7 @@ from flask import g
 from flask_session import Session
 import re
 import time
-import openpyxl
-import pythoncom
-#import comtypes.client  # For Excel to PDF conversion (Windows only)
-import win32com.client 
+import openpyxl 
 from datetime import datetime
 import tempfile
 import shutil
