@@ -1,0 +1,947 @@
+Roll Number,Student Name,Department
+24H71A0101,Adapa Lokeswara Rao,CIVIL
+24H71A0102,Battula Pradeep,CIVIL
+24H71A0103,Boggavarapu Ramadurgamouli,CIVIL
+24H71A0104,Bokka Subhash,CIVIL
+24H71A0105,Darelli Narasimha Rao,CIVIL
+24H71A0106,Gadda Ashok Kumar,CIVIL
+24H71A0107,Gottipati Tarun,CIVIL
+24H71A0108,Kama Sowmya Rani,CIVIL
+24H71A0109,Kona Mallikharjun Rao,CIVIL
+24H71A0110,Koya Praveen Kumar,CIVIL
+24H71A0111,Madhira Ganesh Reddy,CIVIL
+24H71A0112,Manda Kranti Kumar,CIVIL
+24H71A0113,Mekala Gnana Venkata Vara Prasad,CIVIL
+24H71A0114,Mekapothula Pujitha,CIVIL
+24H71A0115,Pallapu Srinadh,CIVIL
+24H71A0116,Papanaboina Papaiah,CIVIL
+24H71A0117,Pasupuleti Adi Venkata Sri Nithin,CIVIL
+24H71A0118,Payyavula Siddardha,CIVIL
+24H71A0119,Peyyala Manoj Kumar,CIVIL
+24H71A0120,Ravuri Raviteja,CIVIL
+24H71A0121,Syed John Basha,CIVIL
+24H71A0122,Talupula Prasanna,CIVIL
+24H71A0123,Thogaru Tarun Kumar,CIVIL
+24H71A0124,Tungam Tharun Babu,CIVIL
+24H71A0125,Ulavalapudi Dileep,CIVIL
+24H71A0126,Veeranki Eswar,CIVIL
+24H71A0201,Alla Sasi Kumar,EEE
+24H71A0202,Amarlapudi Lazar,EEE
+24H71A0203,Ananthu Anusha,EEE
+24H71A0204,Annamdevula Sudheer,EEE
+24H71A0205,Arumakala Abhiram,EEE
+24H71A0206,Badisa Madhav,EEE
+24H71A0207,Chalamala Veera Nageswararao,EEE
+24H71A0208,Chilukuri Siva Rosi Reddy,EEE
+24H71A0209,Chinta Uma Maheswara Rao,EEE
+24H71A0210,Chintalacheruvu L K S D Gayatri,EEE
+24H71A0211,Chinthati Charanya Sivani,EEE
+24H71A0212,Chirra Nagatejaswi,EEE
+24H71A0213,Dokka Rakesh,EEE
+24H71A0214,Eamani Bhanu Prakash,EEE
+24H71A0215,Emmadi Durga,EEE
+24H71A0216,Gudela Naga Thanishka,EEE
+24H71A0217,Kadavakolli Nandha Kishore,EEE
+24H71A0218,Kalangi Venkateswara Rao,EEE
+24H71A0219,Kanagala Vasu,EEE
+24H71A0220,Kanaparthi Sampath Kumar,EEE
+24H71A0221,Kodavatikanti Jyothi,EEE
+24H71A0222,Kondru Vamsi Krishna,EEE
+24H71A0223,Kumbham Anjali,EEE
+24H71A0224,Kuraganti Ramya,EEE
+24H71A0225,Maganti Revanth Kumar,EEE
+24H71A0226,Mamidi Hyma,EEE
+24H71A0227,Manukonda Vijayababu,EEE
+24H71A0228,Markapurapu Hima Sri,EEE
+24H71A0229,Masanam Bhuvaneswar,EEE
+24H71A0230,Mattakoyya Chandrashekar,EEE
+24H71A0231,Mulisetti Abhishek Mani,EEE
+24H71A0232,Orsu Siva Mani,EEE
+24H71A0233,Paladhi Buddha Balaji,EEE
+24H71A0234,Pallapu Anil,EEE
+24H71A0235,Paritala Jagadish,EEE
+24H71A0236,Peddapati Kusuma Bhanu,EEE
+24H71A0237,Pilli Dharaneswara Sri Sashank,EEE
+24H71A0238,Pothina Vedaditya Karthik,EEE
+24H71A0239,Repalle Naga Jagadeep,EEE
+24H71A0240,Saale Rajesh,EEE
+24H71A0241,Salimadugu Siva Reddy,EEE
+24H71A0242,Shaheen Shaik,EEE
+24H71A0243,Siddila Teja,EEE
+24H71A0244,Somoju Yamini Venkata Sravani,EEE
+24H71A0245,Tadikonda Hariprasad,EEE
+24H71A0301,Annapureddy Chandra Sekhar Reddy,MECH
+24H71A0302,Banavath Syam Kumar Nayak,MECH
+24H71A0303,Banka Sivaji,MECH
+24H71A0304,Bonta Naveen,MECH
+24H71A0305,Chatla Jagadeesh,MECH
+24H71A0306,Chirla Naga Mahesh,MECH
+24H71A0307,Chitturi Gnanish,MECH
+24H71A0308,Duba Thrivikram Mani Kumar,MECH
+24H71A0309,Jammula Jaswanth Kalyan,MECH
+24H71A0310,Jirra Prabhas,MECH
+24H71A0311,Katta Bharatendra Sai,MECH
+24H71A0312,Kommu Dinesh Naidu,MECH
+24H71A0313,Konakala Chaitanya,MECH
+24H71A0314,Madda Avinash,MECH
+24H71A0315,Nunna Hima Venkata Harshith,MECH
+24H71A0316,Palukuri Bannu Babu,MECH
+24H71A0317,Panthagani Deva Raj Kumar,MECH
+24H71A0318,Panuganti Mahindhar Naidu,MECH
+24H71A0319,Para Srinivas,MECH
+24H71A0320,Prasadam Sravan Eswar,MECH
+24H71A0321,Rajulapati Ganesh,MECH
+24H71A0322,Sayyed Ayub,MECH
+24H71A0323,Uttapalla Siva Shankar,MECH
+24H71A0324,Vaka Jwala Umesh Chandra Naidu,MECH
+24H71A0401,Attili Bhaskara Rao,ECE
+24H71A0402,Araka Varshini,ECE
+24H71A0403,Arepalli Manikanta,ECE
+24H71A0404,Atta Tejasri,ECE
+24H71A0405,Bajjuri Nandu,ECE
+24H71A0406,Bhukya Gopi,ECE
+24H71A0407,Boggarapu Govardhan,ECE
+24H71A0408,Bolem Akhila,ECE
+24H71A0409,Bommireddy Manikanta Reddy,ECE
+24H71A0410,Chekravaram Nitish Verma,ECE
+24H71A0411,Chenikala Naga Madhu Sai Hemanth,ECE
+24H71A0412,Chennupalli Yamini,ECE
+24H71A0413,Chinnam Sreevali,ECE
+24H71A0414,Chukkapalli Poojitha Chowdary,ECE
+24H71A0415,Dondapati  Venkata Pavani,ECE
+24H71A0416,Donthireddy Surya Vandana,ECE
+24H71A0417,Dubbaku Sandhyarani,ECE
+24H71A0418,Eeda Renuka,ECE
+24H71A0419,Gandra Raja Sekhar Reddy,ECE
+24H71A0420,Gopilli Ganesh,ECE
+24H71A0421,Gunji Sravani,ECE
+24H71A0422,Kakulapati Venkata Siva Nagaraju,ECE
+24H71A0423,Kalluri Chenchu Lakshmi,ECE
+24H71A0424,Karakavalasa Madhurima,ECE
+24H71A0425,Karumanchi Mary Sowmya,ECE
+24H71A0426,Kasarelli Siva Krishna,ECE
+24H71A0427,Katarapu Anesh Babu,ECE
+24H71A0428,Katta Navya,ECE
+24H71A0429,Kondapureddy Deepika,ECE
+24H71A0430,Kummarakuntla Bhargav,ECE
+24H71A0431,Kuna Nagi Reddy,ECE
+24H71A0432,Maddi Jagadeesh,ECE
+24H71A0433,Madiraju Suman,ECE
+24H71A0434,Mahammad Jaffar Sadiq,ECE
+24H71A0435,Mandasu Sasidhar,ECE
+24H71A0436,Mattukoyya Ramanaiah,ECE
+24H71A0437,Mendem Akhil Bharath Kumar,ECE
+24H71A0438,Mettela Sai Ram,ECE
+24H71A0439,Mulugu Sneha,ECE
+24H71A0440,Nakka Durga Bhanu Prasad,ECE
+24H71A0441,Nandru Vyshnavi,ECE
+24H71A0442,Narasapurapu Mohan Sai,ECE
+24H71A0443,Pagidi Venkateswara Rao,ECE
+24H71A0444,Parsa Bhavyasri,ECE
+24H71A0445,Pathuri Devakumar,ECE
+24H71A0446,Pesaramelli Vinod,ECE
+24H71A0447,Polagani Jahanavi,ECE
+24H71A0448,Purushothapatnam Teja Sree,ECE
+24H71A0449,Puthaboyina Bhavani Sankar,ECE
+24H71A0450,Rakkisa Megha Venkata Syam,ECE
+24H71A0451,Remala Joshitha,ECE
+24H71A0452,Shaik Ameer,ECE
+24H71A0453,Shaik Jafer,ECE
+24H71A0454, Shaik Kulsum,ECE
+24H71A0455,Shaik Mohammad Rafi,ECE
+24H71A0456,Shaik Nasima,ECE
+24H71A0457,Shaik Thaju,ECE
+24H71A0458,Syamala Pujitha,ECE
+24H71A0459,Tadepalli Lakshmi Hanithra,ECE
+24H71A0460,Tempalli Rama Krishna,ECE
+24H71A0461,Tinnaluri Mohana Venkata Laxmi Sai Priya,ECE
+24H71A0462,Velpula Pranitha,ECE
+24H71A0463,Vemula Karthik,ECE
+24H71A0464,Yarlagadda Manikanta Sai,ECE
+24H71A0465,Yarramsetty Nagamanikanta Raju,ECE
+24H71A0466,Adireddy Sasikanth,ECE
+24H71A0467,Allu Pavan Kumar,ECE
+24H71A0468,B Nitish,ECE
+24H71A0469,Bandlamudi Nihar,ECE
+24H71A0470,Battu Rohini,ECE
+24H71A0471,Battula Srilakshmi,ECE
+24H71A0472,Bhukya Gopichand,ECE
+24H71A0473,Bhupathi Prem Tej,ECE
+24H71A0474,Bobbillapati Sowmya Sri,ECE
+24H71A0475,Bodicharla Punith kumar,ECE
+24H71A0476,Bolisetti Vighnesh Sri Naga Sai,ECE
+24H71A0477,Chigurupati Teja Sree,ECE
+24H71A0478,Chiliveru Sivasankar,ECE
+24H71A0479,Chollangi Dileep Kumar,ECE
+24H71A0480,Damineni Bhavyasri,ECE
+24H71A0481,Gudavalli Venkata Naresh,ECE
+24H71A0482,Guduru Naga Sri,ECE
+24H71A0483,Gugulothu Eswar Nayak,ECE
+24H71A0484,Jagannadham Durga Harish,ECE
+24H71A0485,Jakkampudi Vasavi,ECE
+24H71A0486,Janjyam Naga Venkata Sai Dheeraj,ECE
+24H71A0487,Kandhi Madan Sai,ECE
+24H71A0488,Kolakaluri Rohith,ECE
+24H71A0489,Kommavarapu bhavya,ECE
+24H71A0490,Koppanathi Syam Kumar,ECE
+24H71A0491,Kopuru Navyasri,ECE
+24H71A0492,Kukkala Lakshmi Durga,ECE
+24H71A0493,Kusuma Vadlamudi,ECE
+24H71A0494,Lella Sai Ganesh,ECE
+24H71A0495,Maganti Harish,ECE
+24H71A0496,Mahadev Lokeswari,ECE
+24H71A0497,Mamilla Mayur Kumar,ECE
+24H71A0498,Mandadi Revanth Sai,ECE
+24H71A0499,Mandapati Surya Gopal,ECE
+24H71A04A0,Markapudi Gowripriya,ECE
+24H71A04A1,Maruthai Veeran Jagadeesh,ECE
+24H71A04A2,Meesala Lakshmi Indrani,ECE
+24H71A04A3,Mohammed Noor E Rihan,ECE
+24H71A04A4,Mopidevi Chethan abhiram,ECE
+24H71A04A5,Munnangi Sasidhar,ECE
+24H71A04A6,Nadakuditi Prasanthi,ECE
+24H71A04A7,Nakirikanti Jasmin,ECE
+24H71A04A8,Nakka Praveen,ECE
+24H71A04A9,Nallamekala Karthik,ECE
+24H71A04B0,Nunna Harini,ECE
+24H71A04B1,Pamidimarri Narendra,ECE
+24H71A04B2,Parepalli Vineetha Bhargavi,ECE
+24H71A04B3,Paritala Bhandhavya,ECE
+24H71A04B4,Pattem Chandana,ECE
+24H71A04B5,Perike Karthik,ECE
+24H71A04B6,Peyyala Manohar,ECE
+24H71A04B7,Pitta Sanjay,ECE
+24H71A04B8,Pokala Devi Satwika,ECE
+24H71A04B9,Ponnapalli Vinay,ECE
+24H71A04C0,Shaik Ahty Shamul Haq,ECE
+24H71A04C1,Shaik Baji,ECE
+24H71A04C2,Shaik Maaria Kousar,ECE
+24H71A04C3,Shaik Nagulmeera ,ECE
+24H71A04C4,Tangirala Vamsi,ECE
+24H71A04C5, Thota Sai Pravallika ,ECE
+24H71A04C6,Thota Vinay Kumar,ECE
+24H71A04C7,Tumma Dedeepya,ECE
+24H71A04C8,Vangapalli Leela Sai Manohar,ECE
+24H71A04C9,Vellanki Bhagath Balaji,ECE
+24H71A04D0,Vemuri Guna Shekar,ECE
+24H71A04D1,Achanta Bhagya Sri Satya Alekhya,ECE
+24H71A04D2,Akkapolu Abhishek,ECE
+24H71A04D3,Allamsetti Durga Vaishnavi,ECE
+24H71A04D4,Bachhu Prananya,ECE
+24H71A04D5,Bandiboyina Venkatesh,ECE
+24H71A04D6,Bandila Yagnitha,ECE
+24H71A04D7,Battula Jaswanth,ECE
+24H71A04D8,Bodapati Nissy Tejaswini,ECE
+24H71A04D9,Chanugandla Santhosh,ECE
+24H71A04E0,Chatragadda Bhargav,ECE
+24H71A04E1,Chodavarapu Dinesh Kumar,ECE
+24H71A04E2,Dharavathu Bharath,ECE
+24H71A04E3,Gampasanthala Padmini,ECE
+24H71A04E4,Ganapavarapu Supraja,ECE
+24H71A04E5,Gottam Preethi,ECE
+24H71A04E6,Gude Anil,ECE
+24H71A04E7,Gudeti Roja,ECE
+24H71A04E8,Inala Santhosh Kumar,ECE
+24H71A04E9,Kadumala Karthik ,ECE
+24H71A04F0,Kakuleti Mounika,ECE
+24H71A04F1,Kalingi Keerthi,ECE
+24H71A04F2,Kasani Venkata Durga Rao,ECE
+24H71A04F3,Katamreddy Siva Parvathi,ECE
+24H71A04F4,Katarapu Sujith,ECE
+24H71A04F5,Kodali Jahnavi,ECE
+24H71A04F6,Kumbha Harshitha Lakshmi,ECE
+24H71A04F7,Kummarapalli Sai Charan Teja,ECE
+24H71A04F8,Kuraganti Venkatesh,ECE
+24H71A04F9,Lakavath Lavanya,ECE
+24H71A04G0,Lingala Veera Venkata Gowtham,ECE
+24H71A04G1,Madala Venkata Vamsi,ECE
+24H71A04G2,Maddiguntla Naveen,ECE
+24H71A04G3,Mallavalli Venkata Ravindra,ECE
+24H71A04G4,Mathangi Prasanth Kumar,ECE
+24H71A04G5,Mecharapu Venkat,ECE
+24H71A04G6,Medikonda Rajasekhar Reddy,ECE
+24H71A04G7,MOHAMMAD Irfan,ECE
+24H71A04G8,Nakka Vani,ECE
+24H71A04G9,Nalluri Karthik,ECE
+24H71A04H0,Nanneboina Akhila,ECE
+24H71A04H1,Nayani Raga Deepika,ECE
+24H71A04H2,Odugu Charitha,ECE
+24H71A04H3,Padamata Tarun,ECE
+24H71A04H4,Paidi Kavya,ECE
+24H71A04H5,Pallepogu Sruthi,ECE
+24H71A04H6,Panam Rajesh,ECE
+24H71A04H7,Perna Hemanth Kumar,ECE
+24H71A04H8,Poluparthi Sirisha,ECE
+24H71A04H9,Raparla Devandra Naga Venkata Sai Pavan,ECE
+24H71A04I0,Ravula Bhargavi,ECE
+24H71A04I1,Ravuri Keerthi,ECE
+24H71A04I2,Rayanchu Nageswara Rao,ECE
+24H71A04I3,Repalle Pavan Gopi Manikanta Sai,ECE
+24H71A04I4,Shaik Haffizuddin,ECE
+24H71A04I5,Shaik Haseena,ECE
+24H71A04I6,Shaik Hashma,ECE
+24H71A04I7,Shaik Khaja Hussain,ECE
+24H71A04I8,Shaik Khizer Mehadi,ECE
+24H71A04I9,Shaik Nasreen,ECE
+24H71A04J0,Tadi Aswini,ECE
+24H71A04J1,Talasila Uma Gayatri,ECE
+24H71A04J2,Tummala Dileep Kumar,ECE
+24H71A04J3,Vavilapalli Likhith,ECE
+24H71A04J4,Velicheti Rachana,ECE
+24H71A04J5,Vissamsetti Naga Phani Kumari,ECE
+24H71A04J6,Yadavalli Rajendra,ECE
+24H71A0501,Aravapalli mohan Chandra,CSE
+24H71A0502,Bhavana Pavani,CSE
+24H71A0503,Bodepudi Naga Nandini,CSE
+24H71A0504,Boppudi Venkata Siva Prasad,CSE
+24H71A0505,Chebattina Jathin Kumar,CSE
+24H71A0506,Cherukuri Gopi Naga Manikanta,CSE
+24H71A0507,Chintala Narasimha Rao,CSE
+24H71A0508,Dirisala Venkata Sai Abhishek Reddy,CSE
+24H71A0509,Dummanaboyina Kavya,CSE
+24H71A0510,Galam Aravind ,CSE
+24H71A0511,Gonela Pujitha,CSE
+24H71A0512,Gudi Hemanth Naga Sai,CSE
+24H71A0513,Guduru Iswarya,CSE
+24H71A0514,Gunturu Sravani,CSE
+24H71A0515,Jada Sai Prasad,CSE
+24H71A0516,Jarabala Leela Bharath,CSE
+24H71A0517,Joniboyina Jeevan Venkatesh,CSE
+24H71A0518,Kalyanam Ajith Krishna,CSE
+24H71A0519,Kamma Chandrika,CSE
+24H71A0520,Kanagala Devendra,CSE
+24H71A0521,Kanchi Vineela Grace Brighty,CSE
+24H71A0522,Kanumuri Navanith Varma,CSE
+24H71A0523,Kasarla Dedeepya,CSE
+24H71A0524,Kethavath Sirisha,CSE
+24H71A0525,Kommisetti Anuradha,CSE
+24H71A0526,Koppisetti Pavithra,CSE
+24H71A0527,Korampalli Upi Krishna,CSE
+24H71A0528,Kotha Chandrasekhar,CSE
+24H71A0529,Kotla Keerthi Rani,CSE
+24H71A0530,Kukutla Sai Naga Venkata Jwala Anuhyasri,CSE
+24H71A0531,Lethadla Bhavani,CSE
+24H71A0532,Mandala Teja,CSE
+24H71A0533,Medarametla Pranitha,CSE
+24H71A0534,Mohammad Ishrath Fathima,CSE
+24H71A0535,Mohammad Sahil,CSE
+24H71A0536,Nannuri Santhosh,CSE
+24H71A0537,Neelam Vyshnavi,CSE
+24H71A0538,Nesanuru Uday Kiran Reddy,CSE
+24H71A0539,Pagadala Alekhya,CSE
+24H71A0540,Pamarthi Tejaswini,CSE
+24H71A0541,Phanithapu Teja Sri,CSE
+24H71A0542,Pilli Sisiro,CSE
+24H71A0543,Polukonda Poojitha,CSE
+24H71A0544,Pulagam Venkata Gopi,CSE
+24H71A0545,Pulimaddi Sirisha,CSE
+24H71A0546,Ranimekala Somanandhan,CSE
+24H71A0547,Saikam Rohith Ramesh,CSE
+24H71A0548,Sali Kavya,CSE
+24H71A0549,Sangepu Vijaya,CSE
+24H71A0550,Shaik Abdul Rehaman,CSE
+24H71A0551,Seelam Sri Lakshmi,CSE
+24H71A0552,Shaik Ameena Tabussum,CSE
+24H71A0553,Shaik Haleema,CSE
+24H71A0554,Shaik Karishma,CSE
+24H71A0555,Shaik Karishma Begum,CSE
+24H71A0556,Shaik Yasin,CSE
+24H71A0557,Tejavath Anvesh,CSE
+24H71A0558,Thammisetti Nagababu,CSE
+24H71A0559,Timmasarthi Prasanthi,CSE
+24H71A0560,Variganji Chaithanya Karthik,CSE
+24H71A0561,Vepuri Sarika,CSE
+24H71A0562,Vikkurthi Kalyani,CSE
+24H71A0563,Vinukonda Venkata Durga Pavan Kalyan,CSE
+24H71A0564,Yarragunta Madhuri,CSE
+24H71A0565,Yedulapurapu Pradeep,CSE
+24H71A0566,Allada Likhitha,CSE
+24H71A0567,Banavath Jayanthi Bai,CSE
+24H71A0568,Bojadla Praveen Kumar,CSE
+24H71A0569,Borra Prasanthi,CSE
+24H71A0570,Burra Usha Kiranmai,CSE
+24H71A0571,Bysani Keli Lakshmi Harshitha,CSE
+24H71A0572,Chennu Jaswanth,CSE
+24H71A0573,Chinta Varshitha,CSE
+24H71A0574,Chinthala Ramaiah,CSE
+24H71A0575,Chirumamilla Sai Ram Brahmam,CSE
+24H71A0576,Dharavathu Prem Kumar,CSE
+24H71A0577,Gollapalli Surya Teja,CSE
+24H71A0578,Gonela Triveni,CSE
+24H71A0579,Gunadala Sandeep,CSE
+24H71A0580,Guntupalli Usha,CSE
+24H71A0581,Illipilli Byula,CSE
+24H71A0582,Kakani Purna Sekhar,CSE
+24H71A0583,Kambala Nandini,CSE
+24H71A0584,Kasireddy Kavya,CSE
+24H71A0585,Katta Sri Rupa,CSE
+24H71A0586,Moturi Keerthana,CSE
+24H71A0587,Kokkiligadda Manmadha Sai Krishna,CSE
+24H71A0588,Konakalla Deepika,CSE
+24H71A0589,Kongara Bhavaghna,CSE
+24H71A0590,Kopolu Mohana Rupa,CSE
+24H71A0591,Koppisetty Manoj,CSE
+24H71A0592,Koppu Rohitha,CSE
+24H71A0593,Lakkisetty Nagalakshmi,CSE
+24H71A0594,Macherla Pravallika,CSE
+24H71A0595,Mada Vasudha Rani,CSE
+24H71A0596,Mahankali Raja Sri,CSE
+24H71A0597,Martha Lakshmi Manisha,CSE
+24H71A0598,Mekala Shirisha Rani,CSE
+24H71A0599,Modugula Vijaya Kumari,CSE
+24H71A05A0,Modupalli Sai,CSE
+24H71A05A1,Mohammad Sameera Sultana,CSE
+24H71A05A2,Mohammad Tousif Iqbal,CSE
+24H71A05A3,Muchhu Gopi Chand,CSE
+24H71A05A4,Mudunury Sahithi Naga Vanditha,CSE
+24H71A05A5,Mullangi Sreeja,CSE
+24H71A05A6,Naganaboyina Bhavani,CSE
+24H71A05A7,Nagidi Tirumala Devi,CSE
+24H71A05A8,Nagiri Lakshmi Reddy,CSE
+24H71A05A9,Namcharla Navya Sri,CSE
+24H71A05B0, Nangigadda Fameya Tabassum ,CSE
+24H71A05B1,Nunnagoppala Durga Prasad,CSE
+24H71A05B2,Nuthi Anitha,CSE
+24H71A05B3,Pagadala Vijay Kumar,CSE
+24H71A05B4,Paritala Prabhavathi,CSE
+24H71A05B5,Paturi Karthik,CSE
+24H71A05B6,Pedapudi Prakash,CSE
+24H71A05B7,Pothunuri Anwitha,CSE
+24H71A05B8,Ramisetty Ravi Teja,CSE
+24H71A05B9,Ramisetty Ujwala Sri Sukrutha,CSE
+24H71A05C0,Seethala Mounika,CSE
+24H71A05C1,Shahapuram Harshitha,CSE
+24H71A05C2,Shaik Ahmad Ali,CSE
+24H71A05C3,Shaik Saleem,CSE
+24H71A05C4,Sunkara Venkata Prudhvi,CSE
+24H71A05C5,Talluri Prasanth Raj,CSE
+24H71A05C6,Thumati Naveen,CSE
+24H71A05C7,Tummala Nagavendra Babu,CSE
+24H71A05C8,Uppala Priyanka,CSE
+24H71A05C9,Vanka Tharuna Sri,CSE
+24H71A05D0,Vemana Pushmitha,CSE
+24H71A05D1,Vemavarapu Avinash,CSE
+24H71A05D2,Ammineni Bhargavi ,CSE
+24H71A05D3,Annamdasu Bhavya Saimani,CSE
+24H71A05D4,B Harish,CSE
+24H71A05D5,Banavathu Madhavi,CSE
+24H71A05D6,Bathina Harshitha,CSE
+24H71A05D7,Bolagani Pujitha,CSE
+24H71A05D8,Boppana Sai Ram,CSE
+24H71A05D9,Botsa Bala Chandra Sekhar,CSE
+24H71A05E0,Chalamala Yasasri,CSE
+24H71A05E1,Chanamolu Jagadeesh,CSE
+24H71A05E2,Chinni Karthik,CSE
+24H71A05E3,Damala Meghana,CSE
+24H71A05E4,Dasika Venkata Sri Valli Datta Vyshnavi,CSE
+24H71A05E5,Dhanekula Bharathi,CSE
+24H71A05E6,Gadde Varsha,CSE
+24H71A05E7,Gadicharla Sri Harsha Niharika,CSE
+24H71A05E8,Gandham Mohitha Naga Sai,CSE
+24H71A05E9,Gangisetti Durga Pavan Tej,CSE
+24H71A05F0,Gonela Balamastanayya,CSE
+24H71A05F1,Gopalam Reshma Kumari,CSE
+24H71A05F2,INAPANURTHI KORESH RAJU,CSE
+24H71A05F3,Ippili Vasanthi,CSE
+24H71A05F4,Jakkireddy Bharath Reddy,CSE
+24H71A05F5,Jonnalagadda Daniel,CSE
+24H71A05F6,Karukula Lakshmi Bhargavi,CSE
+24H71A05F7,Kasturi Monita Siva Priya,CSE
+24H71A05F8,Kilaru Naga Dinesh,CSE
+24H71A05F9,Kola Prasanna Kumar,CSE
+24H71A05G0,Kothapalli Ashish Pranay,CSE
+24H71A05G1,Kovvuri Harshavardhan,CSE
+24H71A05G2,Mahanthi Durga Prasad,CSE
+24H71A05G3,Malineni Khyathi Sree,CSE
+24H71A05G4,Manda Koteswara Rao,CSE
+24H71A05G5,Meegada Devika,CSE
+24H71A05G6,Mohammad Tehseen,CSE
+24H71A05G7,Moruboyina Sujithasri,CSE
+24H71A05G8,Mulakalapalli Bhanu Sri Pavan,CSE
+24H71A05G9,Muppuri Sai Murali,CSE
+24H71A05H0,Nallani Dasaradh,CSE
+24H71A05H1,Pillutla Tanuja,CSE
+24H71A05H2,Pinnam Vaishnavi,CSE
+24H71A05H3,Pogula Jyothirmai,CSE
+24H71A05H4,Prudhivi Bhavya Sri,CSE
+24H71A05H5,Punem Srivalli,CSE
+24H71A05H6,Ramisetty Pavan,CSE
+24H71A05H7,Seelam Tejashu,CSE
+24H71A05H8,Shaik Fakruddin,CSE
+24H71A05H9,Shaik Mabu Subhani,CSE
+24H71A05I0,Shaik Nadeem Ahammad,CSE
+24H71A05I1,Shaik Nagul Meerasa,CSE
+24H71A05I2,Shaik Rubeena,CSE
+24H71A05I3, Shaik Safiulla,CSE
+24H71A05I4,Shaik Saidulu,CSE
+24H71A05I5,Shaik Samirudin,CSE
+24H71A05I6,Songa Santhosh,CSE
+24H71A05I7,Suraram Charishma Keerthi,CSE
+24H71A05I8,Tamma Durga Sai Reddy,CSE
+24H71A05I9,Thota Druthi,CSE
+24H71A05J0,Toka Nani,CSE
+24H71A05J1,Tupakula Satish,CSE
+24H71A05J2,Vanguri Ratna Babu,CSE
+24H71A05J3,Veerla Sai,CSE
+24H71A05J4,Yalamandala Mohan Krishna,CSE
+24H71A05J5,Yatagiri Anjali,CSE
+24H71A05J6,Yesupogu Mercy,CSE
+24H71A05J7,Adapala Chiranjeevi,CSE
+24H71A05J8,Baluguri Vinay,CSE
+24H71A05J9,Bandi Hari Vamsinath,CSE
+24H71A05K0,Bellamkonda Nithin Chakravarthi,CSE
+24H71A05K1,Betanabotla Bhavya Naga Satya Deepika,CSE
+24H71A05K2,Challagulla Siva Niharika,CSE
+24H71A05K3,Cherukuri Gowtham,CSE
+24H71A05K4,Damarla Shalini,CSE
+24H71A05K5,Dareddy Narasimha Reddy,CSE
+24H71A05K6,Dasari Srinivas,CSE
+24H71A05K7,Devarapalli Gopala Krishna,CSE
+24H71A05K8,Dhone Durga Venkata Naga Vishnavi,CSE
+24H71A05K9,Dodda Sneha Malathi,CSE
+24H71A05L0,Dommeti Subhakar,CSE
+24H71A05L1,Gadde Mani Govardhan,CSE
+24H71A05L2,Gogineni Sidhardha,CSE
+24H71A05L3,Gorsa Ashwitha,CSE
+24H71A05L4,Kaligotla Tarun Kumar,CSE
+24H71A05L5,Kalyanam Anjali,CSE
+24H71A05L6,Kanala Eswari,CSE
+24H71A05L7,Kotha Pallavi,CSE
+24H71A05L8,Kunda Aakash,CSE
+24H71A05L9,Kundeti Naga Siva Kumar,CSE
+24H71A05M0,Kuraganti Koteswara Rao,CSE
+24H71A05M1,Maddavarapu Sri Lakshmi Prasanna,CSE
+24H71A05M2,Maddigunta Anil Kumar,CSE
+24H71A05M3,Mareedu Pavani,CSE
+24H71A05M4,Modepalli Gayathri Gopika,CSE
+24H71A05M5,Moturi Neeraja,CSE
+24H71A05M6,Mule Lahari,CSE
+24H71A05M7,Murala Durga Sai Charan,CSE
+24H71A05M8,Muthyala Niharika,CSE
+24H71A05M9,Mutyaboina Bhuvana,CSE
+24H71A05N0,Nadiminti Lalitha Syamala,CSE
+24H71A05N1,Nagavarapu Chanikya,CSE
+24H71A05N2,Nettem Mani Sankar,CSE
+24H71A05N3,Pajjuru Vaishnavi,CSE
+24H71A05N4,Papaganti Sowmyasree,CSE
+24H71A05N5,Parasa Surendra Babu,CSE
+24H71A05N6,Patnana Meghana,CSE
+24H71A05N7,Pattan Hashma,CSE
+24H71A05N8,Penugonda Chandra Shekar Reddy,CSE
+24H71A05N9,Peram Poorna Chandra Sekhar Reddy,CSE
+24H71A05O0,Pilli Naga Venkata Nithish,CSE
+24H71A05O1,Ponnapati Deepthi,CSE
+24H71A05O2,Posam Naga Pavan,CSE
+24H71A05O3,Rayapudi Devaraju,CSE
+24H71A05O4,Sanapala Sameera,CSE
+24H71A05O5,Sangepu Susmitha,CSE
+24H71A05O6,Shaik Irshad Ahmad,CSE
+24H71A05O7,Shaik Ishajuveriya,CSE
+24H71A05O8,Shaik Moumin Basha,CSE
+24H71A05O9,Shaik Shabana,CSE
+24H71A05P0,Sunkari Siva Krishna,CSE
+24H71A05P1,Syed Afroz,CSE
+24H71A05P2,Tadepalli Lakshmi Devi,CSE
+24H71A05P3,Thripurani Rajesh,CSE
+24H71A05P4,Timmana Chaitanya,CSE
+24H71A05P5,Ummadi Anusha,CSE
+24H71A05P6,Varikallu Priyanka,CSE
+24H71A05P7,Veerapaneni Hemanth Chandra Kiran,CSE
+24H71A05P8,Yada Pavan Kumar Sai Raja V N D S R K,CSE
+24H71A05P9,Yadala Navadeep Kumar,CSE
+24H71A05Q0,Yadam Gopi Krishna,CSE
+24H71A05Q1,Yalla Winitha,CSE
+24H71A1201,Akurati Venkata Pramod Kumar,IT
+24H71A1202,Bandaravuri Mounika,IT
+24H71A1203,Bandi Sailaja,IT
+24H71A1204,Batchu Divyasri,IT
+24H71A1205,Battula Manasa,IT
+24H71A1206,Bodduluri Satyanarayana,IT
+24H71A1207,Chanumolu Lakshmi Lavanya,IT
+24H71A1208,Chilakapati Mahitha,IT
+24H71A1209,Chintala Sai Santhosh,IT
+24H71A1210,Darise Sandya,IT
+24H71A1211,Dasari Sowjanya,IT
+24H71A1212,Devanaboyina Pavan Kumar,IT
+24H71A1213,Dondeti Kusuma Swetha,IT
+24H71A1214,Doradla Dhatri Lakshmi,IT
+24H71A1215,Ginjupalli Sumanth,IT
+24H71A1216,Godavarthi Subhash,IT
+24H71A1217,Golleru Chaitanya Krishna,IT
+24H71A1218,Gonugunta Lakshmi Sravanthi,IT
+24H71A1219,Gorrepati Sandhya,IT
+24H71A1220,Gunti Gowtham,IT
+24H71A1221,Gunukula Sri Haripriya,IT
+24H71A1222,Imandhi Jaya Karthik,IT
+24H71A1223,Jasthi Arun,IT
+24H71A1224,Jonnalagadda Sree ram,IT
+24H71A1225,Kalavala Geethika,IT
+24H71A1226,Kalyanam Saranya,IT
+24H71A1227,Kammili Mohana Rupa,IT
+24H71A1228,Kanakapudi Kalyani,IT
+24H71A1229,Kankata Jayakrishna,IT
+24H71A1230,Karaka Chinni Pavani,IT
+24H71A1231,Kommirisetti Sai Teja ,IT
+24H71A1232,Maka Rohith Naga Chandu,IT
+24H71A1233,Malluri Gowtham,IT
+24H71A1234,Mamidi Hima,IT
+24H71A1235,Mukkapati Yasaswani,IT
+24H71A1236,Mulagada Kusuma Priya,IT
+24H71A1237,Musunuri Samanth,IT
+24H71A1238,Nalli lakshmi Sujan,IT
+24H71A1239,Pillalamarri Pavan Sai,IT
+24H71A1240,Pinnelli Naga Manikanta,IT
+24H71A1241,Rangu Chetana Sai,IT
+24H71A1242,Rapolu Sri Venkata Naga Suvarna,IT
+24H71A1243,Ravuri Devika,IT
+24H71A1244,Salika Vaishnavi,IT
+24H71A1245,Sangepu Sai Krishna,IT
+24H71A1246,Sanneboina Satish,IT
+24H71A1247,Shaik Farheen,IT
+24H71A1248,Shaik Gousia Samdani,IT
+24H71A1249,Shaik  Jabeer Pasha,IT
+24H71A1250,Shaik Jafreen Khan,IT
+24H71A1251,Shaik Mahamad Ashfa,IT
+24H71A1252,Shaik Sumayya Begum,IT
+24H71A1253,Sikha Pranith,IT
+24H71A1254,Suvarnakanti Bala Aparna,IT
+24H71A1255,Syed Khaja Mohiddin,IT
+24H71A1256,Tangellamudi Tejaswini,IT
+24H71A1257,Thayee Anusha,IT
+24H71A1258,Thota Sai Vinay,IT
+24H71A1259,Turaka Dharani,IT
+24H71A1260,Thumma Rakesh,IT
+24H71A1261,Ummineni Nagatejasree,IT
+24H71A1262,Viswanadhapalli Lahari,IT
+24H71A1263,Vutukuri Venkata Sai Maheswara Yasaswi,IT
+24H71A1264,Yanala Akash,IT
+24H71A1265,Adusumalli Jagruthi,IT
+24H71A1266,Akurathi Naga Harsha,IT
+24H71A1267,Arepalli Hema Madhuri,IT
+24H71A1268,Bandarupalli Kusuma,IT
+24H71A1269,Battula Mahesh,IT
+24H71A1270,Bhimavarapu Surendranath Benarji,IT
+24H71A1271,Bhusani Kousalya,IT
+24H71A1272,Billu Pujitha,IT
+24H71A1273,Bommakanti Praveen,IT
+24H71A1274,Boni Pavan,IT
+24H71A1275,Borra Lavanya,IT
+24H71A1276,Challa Lakshmi Narayana,IT
+24H71A1277,Chodisetti Akshitha,IT
+24H71A1278,Darla Nandini,IT
+24H71A1279,Dasari Srinivas,IT
+24H71A1280,Done Kartheek,IT
+24H71A1281,Durgam Daivik Sai,IT
+24H71A1282,Gadde Manga Tayaru,IT
+24H71A1283,Gudapati Lakshmi Tirupathamma,IT
+24H71A1284,Gummadi Pranathi,IT
+24H71A1285,Gunnam Sudhir,IT
+24H71A1286,Gunturu Venkata Naga Sai,IT
+24H71A1287,Kambampati Ramu,IT
+24H71A1288,Katta Poojitha,IT
+24H71A1289,Khandapu  Mounika,IT
+24H71A1290,Killada Ramu ,IT
+24H71A1291,Konangi Udaya Srinu,IT
+24H71A1292,Kopuri Manoj Kumar,IT
+24H71A1293,Kothapalli Nikhil Kumar,IT
+24H71A1294,Kotikalapudi Uma Devi,IT
+24H71A1295,Kovuri Avinash,IT
+24H71A1296,Maginam Naga Sri Hari,IT
+24H71A1297,Malaji Soniya,IT
+24H71A1298,Malempati Divya Sri,IT
+24H71A1299,Mallempudi Upendra,IT
+24H71A12A0,Mellempudi Rajamanikanta,IT
+24H71A12A1,Menapati Prudvi Raj,IT
+24H71A12A2,Mothukuri Reshma Sri,IT
+24H71A12A3,Nagulagani Sai Venkat,IT
+24H71A12A4,Nagulapati Tarun,IT
+24H71A12A5,Nallam Bunny Sri Priya,IT
+24H71A12A6,Padala Ritika Lakshmi,IT
+24H71A12A7,Pallepogu Kalyan,IT
+24H71A12A8,Pandi Deepika,IT
+24H71A12A9,Peram Ramana Reddy,IT
+24H71A12B0,Pidatala Lakshmi Prasanna,IT
+24H71A12B1,Ponnaganti Manasa Harshini,IT
+24H71A12B2,Pulicharla Bhuvana Naga Lakshmi,IT
+24H71A12B3,Saggurthi Venkata Subramaneyam ,IT
+24H71A12B4,Sampasala Vinay Kumar,IT
+24H71A12B5,Sarika Akhil,IT
+24H71A12B6,Shaik Akbar Saheb,IT
+24H71A12B7,Shaik Haseena,IT
+24H71A12B8,Shaik Kasab Fathima,IT
+24H71A12B9,Surati Lalitha Devi,IT
+24H71A12C0,Suravarapu Rohith,IT
+24H71A12C1,Suruge Lakshmi Prasanna,IT
+24H71A12C2,Tadepalli Rama Devi,IT
+24H71A12C3,Tangellamudi Priya Haasini,IT
+24H71A12C4,Tanneru Ramu,IT
+24H71A12C5,Thammisetty Sri Akshaya,IT
+24H71A12C6,Thogati Geethika,IT
+24H71A12C7,Thogati prem sagar ,IT
+24H71A12C8,Thota Vinay kumar,IT
+24H71A12C9,Varigalla Naveen,IT
+24H71A12D0,Yarram Tarun,IT
+24H71A5401,Allu Meghanath,AIDS
+24H71A5402,Atkuri Khoushik Babu,AIDS
+24H71A5403,Bajaru Sumanth Kumar,AIDS
+24H71A5404,Bellapu Aruna Jyothi,AIDS
+24H71A5405,Binkineti Himesh,AIDS
+24H71A5406,Boddu Sailaja,AIDS
+24H71A5407,Bodedla Mohannadh,AIDS
+24H71A5408,Chalavadi Jaya Lakshmi,AIDS
+24H71A5409,Chirumamilla Hemanth,AIDS
+24H71A5410,Chitturi Meghana ,AIDS
+24H71A5411,Eede Likhitha,AIDS
+24H71A5412,Gaddaguti Namratha,AIDS
+24H71A5413,Gaddam Yaswanth Kumar,AIDS
+24H71A5414,Gali Chaitanya Reddy,AIDS
+24H71A5415,Gera Siri Sandesh,AIDS
+24H71A5416,Ginjupalli Veerendra,AIDS
+24H71A5417,Goda Varun,AIDS
+24H71A5418,Gogireddy Mahitha,AIDS
+24H71A5419,Gottimukkala Harsha Vardhan,AIDS
+24H71A5420,Indrakanti Vamsi,AIDS
+24H71A5421,Jangili Sai Krishna,AIDS
+24H71A5422,Kalluri Kiran,AIDS
+24H71A5423,Kanagala Parvathi,AIDS
+24H71A5424,Karapa Sravani,AIDS
+24H71A5425,Karri Vijaya Kumar,AIDS
+24H71A5426,Kasarelli Usharani,AIDS
+24H71A5427,Kilaru Aaryan Nagesh,AIDS
+24H71A5428,Kommineni Niharika Chandana,AIDS
+24H71A5429,Konathalapalli Maha Lakshmi,AIDS
+24H71A5430,Konda Naga Harshita,AIDS
+24H71A5431,Kongara Phani Kumar,AIDS
+24H71A5432,Kothapalli Akshay Wesley,AIDS
+24H71A5433,Lam Chandu,AIDS
+24H71A5434,Lankapalli Pavani,AIDS
+24H71A5435,Madadapu Navaneeth,AIDS
+24H71A5436,Mallavalli Jagadeeswari,AIDS
+24H71A5437,Markapudi Ratna Kumari,AIDS
+24H71A5438,Munagoti Ajith Kumar,AIDS
+24H71A5439,Munipalli Rakesh,AIDS
+24H71A5440,Muttireddy Siva Durga Rao,AIDS
+24H71A5441,Nagarjunakonda Indra Lakshmi,AIDS
+24H71A5442,Palanati Indhu,AIDS
+24H71A5443,Perla Srikanth,AIDS
+24H71A5444,Pesaramalli Swarupa,AIDS
+24H71A5445,Pole Dani Paul Samuel,AIDS
+24H71A5446,Pothagani Chandu,AIDS
+24H71A5447,Praturi Uha Chandrika ,AIDS
+24H71A5448,Rameswaram Joseph Raju,AIDS
+24H71A5449,Rayapati Tarun Koushik,AIDS
+24H71A5450,Rodda Chinnapa Reddy,AIDS
+24H71A5451,Sanniboina Alekya,AIDS
+24H71A5452,Saripalli Tharun Sai Reddy,AIDS
+24H71A5453,Seelam Srija,AIDS
+24H71A5454,Shaik Haseena,AIDS
+24H71A5455,Shaik Rafiya,AIDS
+24H71A5456,Shaik Sameera,AIDS
+24H71A5457,Shaik Shahid Raza,AIDS
+24H71A5458,Shanmukhi Bhavana Pravallika,AIDS
+24H71A5459,Srirama Tulasi Ram,AIDS
+24H71A5460,Surisetti Gavya,AIDS
+24H71A5461,Syed Sufyaan,AIDS
+24H71A5462,Tadikamalla Anusha,AIDS
+24H71A5463,Thota Yaswanth Kumar,AIDS
+24H71A5464,Tota Samatha,AIDS
+24H71A5465,Unnam Doondy Dheeraj,AIDS
+24H71A5466,Yandrapu Jhansi Trishunna,AIDS
+24H71A5467,Appana Nagaraju,AIDS
+24H71A5468,Aluri Avinash,AIDS
+24H71A5469,Alladi Manikanta,AIDS
+24H71A5470,Baliga Satya Sree,AIDS
+24H71A5471,Battu Naga Sri Harshini,AIDS
+24H71A5472,Kanaka Durga Sahithi Pranitha Bhogavalli,AIDS
+24H71A5473,Bolisetty Mohana Rupa,AIDS
+24H71A5474,Bollineni Dileep,AIDS
+24H71A5475,Chaladi Sai Siri,AIDS
+24H71A5476,Challa Jahnavi,AIDS
+24H71A5477,Chinthapalli Lakshmi Prasanna,AIDS
+24H71A5478,Chitrapu Prince Abhinav,AIDS
+24H71A5479,Devath Likhith,AIDS
+24H71A5480,Dirisala Venkata Srihari Babu,AIDS
+24H71A5481,Elisala Akhil,AIDS
+24H71A5482,Gade Akash,AIDS
+24H71A5483,Gangipogu Srinivasarao,AIDS
+24H71A5484,Ganta Tharun,AIDS
+24H71A5485,Hamim Meraj Fathima Khan,AIDS
+24H71A5486,Jada Venkata Vinay,AIDS
+24H71A5487,Jammigumpula Raviteja,AIDS
+24H71A5488,Jarapala Venkata Shiva Shankara Varaprasad,AIDS
+24H71A5489,Jonnadula Chandrika,AIDS
+24H71A5490,Kambala Dhanush Kumar,AIDS
+24H71A5491,Kandukuri Pavan Venkata Sai Kumar,AIDS
+24H71A5492,Karuturi Venkata Barna Bass,AIDS
+24H71A5493,Kondeti Gangothri,AIDS
+24H71A5494,Kukkala Siva Sowjanya,AIDS
+24H71A5495,Kuncham Hema Priya,AIDS
+24H71A5496,Kurupudi Likhitha,AIDS
+24H71A5497,Lakshmipathula Kalyani,AIDS
+24H71A5498,Linga Balaji,AIDS
+24H71A5499,Mailarapu Sandeep,AIDS
+24H71A54A0,Mallela Chandu,AIDS
+24H71A54A1,Mareedu Lakshmi,AIDS
+24H71A54A2,Matta Lekhana Reddy,AIDS
+24H71A54A3,Mekala Harish,AIDS
+24H71A54A4,Mohammad Abdul Rehman,AIDS
+24H71A54A5,Munipalli Adarsh,AIDS
+24H71A54A6,Munjampalli Sai Charan,AIDS
+24H71A54A7,Munnangi Keerthika,AIDS
+24H71A54A8,Nandru Sony,AIDS
+24H71A54A9,Paradesi Peter,AIDS
+24H71A54B0,Pavuluri Venkata Bhavani Vyshnavi,AIDS
+24H71A54B1,Ponnati Satya Devika,AIDS
+24H71A54B2,Puppala Homnadh Haigreeva Kumar,AIDS
+24H71A54B3,Pusuluru Sri Durga,AIDS
+24H71A54B4,Ravelli Bhargavi,AIDS
+24H71A54B5,Rebba Syam Venkata Sai,AIDS
+24H71A54B6,Revu Bhagya Sri,AIDS
+24H71A54B7,Shaik Abdul Mobin,AIDS
+24H71A54B8,Shaik Intiyaz,AIDS
+24H71A54B9,Shaik Nayyar Mehadi,AIDS
+24H71A54C0,Shaik Sameerabee,AIDS
+24H71A54C1,Shaik Sania,AIDS
+24H71A54C2,Shaik Shabana,AIDS
+24H71A54C3,Tangellamudi Lavanya,AIDS
+24H71A54C4,Tangirala Akhil Karthik,AIDS
+24H71A54C5,Thallapureddy Supriya,AIDS
+24H71A54C6,Thatiparthi Ravi Teja,AIDS
+24H71A54C7,Tunuguntla Jaya Chandana,AIDS
+24H71A54C8,Vasa Satya Kumar,AIDS
+24H71A54C9,Vemu Harika,AIDS
+24H71A54D0,Vemulakonda Rishiraj,AIDS
+24H71A54D1,Vemulapalli H Naga Durga Lakshmi Sahithi,AIDS
+24H71A54D2,Yarlagadda Sumanth Babu,AIDS
+24H71A6101,Annem Abhiram Reddy,AIML
+24H71A6102,Badugu Praneeth,AIML
+24H71A6103,Bhogadi Pavankumar,AIML
+24H71A6104,Bhupathi Kundhan Kumar,AIML
+24H71A6105,Bodha Naveen Reddy,AIML
+24H71A6106,Bodi Mahitha Sri Siva Naga Pavani,AIML
+24H71A6107,Bommu Manasa,AIML
+24H71A6108,Bommu Neha Sri,AIML
+24H71A6109,Chakka Nagavenkata Subrahmanya Neerajkumar,AIML
+24H71A6110,Chittareddy Sivamani,AIML
+24H71A6111,Devata Sai Venkataramakrishna Mohan Guptha,AIML
+24H71A6112,Devireddy Praveen Sai,AIML
+24H71A6113,Dudekula Sameera,AIML
+24H71A6114,Gannavarapu Venkata Naga Sri Sai Saranya,AIML
+24H71A6115,Golkonda Sk Md Waseem,AIML
+24H71A6116,Gonela Umadevi,AIML
+24H71A6117,Gundla Prasanthi,AIML
+24H71A6118,Gundla Vinila,AIML
+24H71A6119,Imandi Pavan,AIML
+24H71A6120,Jampana Nava Jeevan Bharatirai,AIML
+24H71A6121,Juvva Pranateer Chowdary,AIML
+24H71A6122,Kancharla Supriya,AIML
+24H71A6123,Kokkiligadda Deepthi,AIML
+24H71A6124,Kolusu Pallavi Sudha Sri,AIML
+24H71A6125,Kummaripalli Lohith Sankar,AIML
+24H71A6126,Kurapati Ganesh,AIML
+24H71A6127,Kurapati Satyanarayana Raju,AIML
+24H71A6128,Lanke Omkar,AIML
+24H71A6129,Maanyam Nishitha,AIML
+24H71A6130,Machavarapu Venkata Krishna Bhargavi,AIML
+24H71A6131,Madem Leela Sai Sree,AIML
+24H71A6132,Manepallli Pavan Vedesh,AIML
+24H71A6133,Mannam Navya Sri,AIML
+24H71A6134,Mohammed Khaja Abdul Moin,AIML
+24H71A6135,Muthyala Uma Devi,AIML
+24H71A6136,Nelakurthi Chaithanya,AIML
+24H71A6137,Pamidimarri V V S N Balagopi,AIML
+24H71A6138,Parchuri Gowri Sahith,AIML
+24H71A6139,Pasam Hanshika,AIML
+24H71A6140,Pesaramelli Karthik,AIML
+24H71A6141,Pindi Kavya Priya,AIML
+24H71A6142,Ponnuri Divya,AIML
+24H71A6143,Pottabathina Rishitha,AIML
+24H71A6144,Pucha Ravi Teja,AIML
+24H71A6145,Rayala Prasanthi,AIML
+24H71A6146,Sangepu Yeswanth Siva,AIML
+24H71A6147,Seera Jyoshna,AIML
+24H71A6148,Shaik Abbu Bakar Siddik,AIML
+24H71A6149,Shaik Farheen Tabu,AIML
+24H71A6150,Shaik Hafijul Rehaman,AIML
+24H71A6151,Shaik Haseena,AIML
+24H71A6152,Shaik Jaheer,AIML
+24H71A6153,Shaik Nafis,AIML
+24H71A6154,Shaik Samrin,AIML
+24H71A6155,Sole Siddubabu,AIML
+24H71A6156,Srirama Vinod Kumar,AIML
+24H71A6157,Sunkara  Kiranmai,AIML
+24H71A6158,Tammavarapu Sirisha,AIML
+24H71A6159,Tirumalasetti Ranjith Kumar,AIML
+24H71A6160,Valasani Pavan,AIML
+24H71A6161,Valluri Yogitha Siva Nandini,AIML
+24H71A6162,Vanipenta Narendra,AIML
+24H71A6163,Vasamsetti Devi Sri Prasad,AIML
+24H71A6164,Venna Surendra Reddy,AIML
+24H71A6165,Visvanadapalli Phanindra Varma,AIML
+24H71A6166,Yaswanth Thota,AIML
+24H71A6167,Akiri Nandini,AIML
+24H71A6168,Alladi Gopi Krishna,AIML
+24H71A6169,Annavarapu Rajya Lakshmi,AIML
+24H71A6170,Bandaru Bala Manikanta,AIML
+24H71A6171,Bathula Praveen Kumar,AIML
+24H71A6172,Bayyavarapu Anil Kumar ,AIML
+24H71A6173,Bhimireddy Naga Akhil Reddy ,AIML
+24H71A6174,Burri Nayana Priya,AIML
+24H71A6175,Chavala Ganesh Kumar,AIML
+24H71A6176,Chebrolu Reshma,AIML
+24H71A6177,Chigurusetti Nikhil Prakash Rao,AIML
+24H71A6178,Chilakabattini Shruti,AIML
+24H71A6179,Chinnam Vivek,AIML
+24H71A6180,Chintalapudi Hema Sri Lakshmi,AIML
+24H71A6181,Dondapati Pujitha,AIML
+24H71A6182,Donepudi Thirdha Sri,AIML
+24H71A6183,Eemani Santhosh,AIML
+24H71A6184,Gadde Nithish,AIML
+24H71A6185,Gadupudi Sowjanya,AIML
+24H71A6186,Goka Nikhila,AIML
+24H71A6187,Guduri Venkata Narasimha Reddy,AIML
+24H71A6188,Gunturu Swetha Sri,AIML
+24H71A6189,Gunturu Upendra,AIML
+24H71A6190,Ilapakurthi Mohan Karthikeya,AIML
+24H71A6191,Kaithapalli Venkata Manikanta,AIML
+24H71A6192,Kandru Chris Rohan,AIML
+24H71A6193,Karla Ravi,AIML
+24H71A6194,Katta Naveen Chandra,AIML
+24H71A6195,Kesari Chandra Sekhar Reddy,AIML
+24H71A6196,Kistamsetti Durga Maheswari,AIML
+24H71A6197,Koduri Alekhya,AIML
+24H71A6198,Kolaneedi Krupakar,AIML
+24H71A6199,Kollipaka Bharath Kumar,AIML
+24H71A61A0,Kunireddy Venkata Bharath Kumar Reddy,AIML
+24H71A61A1,Lakarapu Vamsi Krishna,AIML
+24H71A61A2,Maddirala Venu Gopal,AIML
+24H71A61A3,Mandava Kumar Swami,AIML
+24H71A61A4,Mellempudi Hemalatha,AIML
+24H71A61A5,Mohammad Anesa Shifa Tabassum Kaliyari,AIML
+24H71A61A6,Mohammad Ayesha,AIML
+24H71A61A7,Mohammad Sohail Mustaffa,AIML
+24H71A61A8,Muchu Manibabu,AIML
+24H71A61A9,Pamba Nithin,AIML
+24H71A61B0,Pasumarthi Lakshmi Pravallika,AIML
+24H71A61B1,Pasupuleti Gopi,AIML
+24H71A61B2,Ponugoti Keerthi,AIML
+24H71A61B3,Pusapati Uhasrivalli,AIML
+24H71A61B4,Ramisetty Tejaswini,AIML
+24H71A61B5,Rangisetti Navyasri,AIML
+24H71A61B6,Rayala Venkata Sai,AIML
+24H71A61B7,Reddy Chandravathi,AIML
+24H71A61B8,Sangam Bhavitha Sri,AIML
+24H71A61B9,Sanikommu Sruthi,AIML
+24H71A61C0,Shaik Iftekhar Moinuddin,AIML
+24H71A61C1,Sika Niharika,AIML
+24H71A61C2,Sirivella Tej Kiran,AIML
+24H71A61C3,Sukka Sowmya,AIML
+24H71A61C4,Talasila Poojitha,AIML
+24H71A61C5,Thota Lohitha,AIML
+24H71A61C6,Thumati Mahalakshmi,AIML
+24H71A61C7,Vaddanapu Naga Ravikanth,AIML
+24H71A61C8,Varikuti Navadeep Reddy,AIML
+24H71A61C9,Veerla Bhavitha Sai,AIML
+24H71A61D0,Vellineni Yoganandha Chowdary,AIML
+24H71A61D1,Yallavula Bhuvaneswari,AIML
+24H71A61D2,Yarra Aksha Ranjani,AIML

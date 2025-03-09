@@ -6,6 +6,11 @@ xlsxwriter
 openpyxl
 zipfile36
 reportlab
+<<<<<<< HEAD
+=======
+python-dotenv
+requests
+>>>>>>> 7121b00 (Added Dockerfile and Render deployment config)
 pywin32 ; sys_platform == 'win32'
 python-dotenv
 requests
