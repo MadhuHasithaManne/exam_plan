@@ -11,4 +11,4 @@ requests
 pywin32 ; sys_platform == 'win32'
 python-dotenv
 requests
-libreoffice ; sys_platform != 'win32' 
+
