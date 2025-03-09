@@ -19,7 +19,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # ✅ Expose the Flask port (default: 5000, Render expects: 10000)
-EXPOSE 10000
+EXPOSE 5000
 
 # ✅ Set the default command to run the app
 CMD ["gunicorn", "app:app", "--timeout", "120", "--workers", "3"]
