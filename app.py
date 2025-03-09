@@ -667,7 +667,6 @@ def generate_attendance_sheets():
 
 
         print(f"All Excel sheets converted to PDFs and saved in: {pdf_zip_path}")
-        pythoncom.CoUninitialize()
         session['LATEST_ATTENDANCE_DIR']=output_dir
         session['count']=count
         return render_template("download_redirect.html")
