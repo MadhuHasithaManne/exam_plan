@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seating Plan Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            color: #003366;
+            padding: 15px;
+            border-bottom: 3px solid #003366;
+        }
+        .logo {
+            margin-left: 110px; /* Move logo slightly to the right */
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 180px;
+        }
+        .college-info {
+            flex-grow: 1;
+            text-align: center;
+            margin-left: -90px;
+            margin-right: -90px;
+    
+        }
+        .college-info h1,h2,h3,p {
+            margin: 5px 0;
+        }
+        .college-info h1{
+            color:#2a4270;
+        }
+        .college-info h2{
+            color: #e01f1f;
+        }
+        .college-info h3{
+            color: #000;
+        }
+        .accreditation {
+            margin-right: 110px;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .accreditation img {
+            height: 180px;
+            margin: 5px 0;
+        }
+
+        .footer {
+            color:#007BFF;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            
+        }
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .room {
+            margin-bottom: 20px;
+        }
+
+        .room h2 {
+            color: #007bff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="MIC College Logo">
+        </div>
+        <div class="college-info">
+            <h2>DVR & Dr. HS</h2>
+            <h1>MIC College of Technology</h1>
+            <h3>AUTONOMOUS</h3>
+            <p>ISO 9001:2015 Certified Institute
+            <p>(Approved by AICTE & Permanently Affiliated to JNTUK, Kakinada)</p>
+            <p>Kanchikacherla-521180,NTR Dist., A.P., India</p>
+            <p>Phone: 08678-273535 / 94914 57799 / 73826 16824</p>
+            <p>Email: office@mict.ac.in, Website: www.mictech.edu.in</p>
+        </div>
+        <div class="accreditation">
+            <img src="{{ url_for('static', filename='images/naac.png') }}" alt="NAAC Accreditation">
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1><i class="fas fa-chair"></i> Seating Plan Result</h1>
+    
+        <button id="transformBtn" onclick="transformTables()">Transform Tables (6 Rows × 8 Columns per Room)</button>
+    
+        <div id="seating-container">
+            {% for room in rooms %}
+            <div class="room" id="room-{{ room.room_number }}">
+                <h2>Room {{ room.room_number }}</h2>
+                <table class="seatingTable">
+                    <thead>
+                        <tr>
+                            <th>Side A</th>
+                            <th>Side B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in range(room.side_a|length) %}
+                        <tr>
+                            <td>{{ room.side_a[i] }}</td>
+                            <td>{{ room.side_b[i] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+            <!-- Generate Attendance Sheets Button -->
+        <form action="{{ url_for('generate_attendance_sheets') }}" method="GET">
+            <button id="generateBtn"><i class="fas fa-file-alt"></i> Generate Attendance Sheets</button>
+        </form>
+            
+        </div>
+
+    </div>
+    <footer class="footer">
+        <p>&copy; 2025 MIC College of Technology. All Rights Reserved.</p>
+        <p>Website: <a href="http://www.mictech.edu.in" target="_blank">www.mictech.edu.in</a></p>
+    </footer>
+    
+    <script>
+        function transformTables() {
+            let rooms = document.querySelectorAll(".room");
+    
+            rooms.forEach(room => {
+                let table = room.querySelector(".seatingTable");
+                let rows = Array.from(table.rows).slice(1); // Skip header
+    
+                let sideA = [];
+                let sideB = [];
+    
+                // Extract values from the table
+                rows.forEach(row => {
+                    let cells = row.cells;
+                    sideA.push(cells[0].innerHTML);
+                    sideB.push(cells[1].innerHTML);
+                });
+    
+                // Split into 4 equal parts
+                let quarter = sideA.length / 4;
+                let sideA1 = sideA.slice(0, quarter);
+                let sideA2 = sideA.slice(quarter, quarter * 2);
+                let sideA3 = sideA.slice(quarter * 2, quarter * 3);
+                let sideA4 = sideA.slice(quarter * 3);
+    
+                let sideB1 = sideB.slice(0, quarter);
+                let sideB2 = sideB.slice(quarter, quarter * 2);
+                let sideB3 = sideB.slice(quarter * 2, quarter * 3);
+                let sideB4 = sideB.slice(quarter * 3);
+    
+                // Clear existing table
+                table.innerHTML = "";
+    
+                // Create new header row
+                let headerRow = table.insertRow();
+                let headers = ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"];
+                headers.forEach(text => {
+                    let th = document.createElement("th");
+                    th.innerHTML = text;
+                    headerRow.appendChild(th);
+                });
+    
+                // Create new rows
+                for (let i = 0; i < quarter; i++) {
+                    let newRow = table.insertRow();
+                    newRow.insertCell().innerHTML = sideA1[i];
+                    newRow.insertCell().innerHTML = sideB1[i];
+                    newRow.insertCell().innerHTML = sideA2[i];
+                    newRow.insertCell().innerHTML = sideB2[i];
+                    newRow.insertCell().innerHTML = sideA3[i];
+                    newRow.insertCell().innerHTML = sideB3[i];
+                    newRow.insertCell().innerHTML = sideA4[i];
+                    newRow.insertCell().innerHTML = sideB4[i];
+                }
+            });
+            document.getElementById("transformBtn").disabled = true;
+        }
+    </script>
+    
+    </body>
+    </html>

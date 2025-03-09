@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seating and Attendance Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            color: #003366;
+            padding: 15px;
+            border-bottom: 3px solid #003366;
+        }
+        .logo {
+            margin-left: 110px; /* Move logo slightly to the right */
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 180px;
+        }
+        .college-info {
+            flex-grow: 1;
+            text-align: center;
+            margin-left: -90px;
+            margin-right: -90px;
+    
+        }
+        .college-info h1,h2,h3,p {
+            margin: 5px 0;
+        }
+        .college-info h1{
+            color:#2a4270;
+        }
+        .college-info h2{
+            color: #e01f1f;
+        }
+        .college-info h3{
+            color: #000;
+        }
+        .accreditation {
+            margin-right: 110px;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .accreditation img {
+            height: 180px;
+            margin: 5px 0;
+        }
+
+        .footer {
+            color:#007BFF;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            
+        }
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: start;
+    margin-top: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Hide the default radio button */
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+/* Custom radio button */
+.radio-group label::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 2px solid #007BFF;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Checked state */
+.radio-group input[type="radio"]:checked + label::before {
+    background-color: #007BFF;
+    border: 5px solid white;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Highlight selected label */
+.radio-group input[type="radio"]:checked + label {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="MIC College Logo">
+        </div>
+        <div class="college-info">
+            <h2>DVR & Dr. HS</h2>
+            <h1>MIC College of Technology</h1>
+            <h3>AUTONOMOUS</h3>
+            <p>ISO 9001:2015 Certified Institute
+            <p>(Approved by AICTE & Permanently Affiliated to JNTUK, Kakinada)</p>
+            <p>Kanchikacherla-521180,NTR Dist., A.P., India</p>
+            <p>Phone: 08678-273535 / 94914 57799 / 73826 16824</p>
+            <p>Email: office@mict.ac.in, Website: www.mictech.edu.in</p>
+        </div>
+        <div class="accreditation">
+            <img src="{{ url_for('static', filename='images/naac.png') }}" alt="NAAC Accreditation">
+        </div>
+    </header>
+    <div class="container fade-in">
+        <h1><i class="fas fa-user-graduate"></i> Seating and Attendance Generator</h1>
+        <form method="POST" action="/" enctype="multipart/form-data">
+            <label for="num_departments">Number of Departments:</label>
+            <input type="number" name="num_departments" id="num_departments" placeholder="Enter number of departments" required>
+            
+            <div id="departments"></div>
+            
+            <button type="button" onclick="generateDepartmentInputs()">Generate Department Inputs</button>
+            
+            <label for="roll_numbers_file">Upload Roll Numbers File:</label>
+            <input type="file" name="roll_numbers_file" id="roll_numbers_file" required>
+            <label for="exam_type">Type of Examination:</label>
+            <input type="text" name="exam_type" id="exam_type" required>
+            <label for="date">Date of examination:</label>
+            <input type="date" name="date" id="date" required>
+            <label for="room_names">Room Numbers (separated by commas):</label>
+            <input type="text" name="room_names" id="room_names" minlength="150" maxlength="180" required>
+            <label for="exam_session">Session:</label>
+            <label>
+                <input type="radio" name="exam_session" value="Forenoon">
+                Forenoon
+              </label><br>
+              <label>
+                <input type="radio" name="exam_session" value="Afternoon">
+                Afternoon
+              </label><br>
+            
+            <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+        
+        {% if buttons_visible %}
+        <div class="success-message">
+            Data submitted successfully! You can now generate the seating plan and attendance sheets.
+        </div>
+        <form action="{{ url_for('seating_plan') }}" method="GET">
+            <button><i class="fas fa-chair"></i> Generate Seating Plan</button>
+        </form>
+        <!-- <form action="{{ url_for('generate_attendance_sheets') }}" method="GET">
+            <button><i class="fas fa-file-alt"></i> Generate Attendance Sheets</button>
+        </form> -->
+        {% endif %}
+    </div>
+    
+    <script>
+        function generateDepartmentInputs() {
+            const numDepartments = document.getElementById('num_departments').value;
+            const container = document.getElementById('departments');
+            container.innerHTML = '';
+
+            for (let i = 0; i < numDepartments; i++) {
+                const div = document.createElement('div');
+                div.innerHTML = `
+                    <label>Department Name ${i + 1}:</label>
+                    <input type="text" name="department_names[]" placeholder="Enter Department Name" required>
+                    <label>Subject Code ${i + 1}:</label>
+                    <input type="text" name="subject_codes[]" placeholder="Enter Subject Code" required>
+                    <label>Subject Name ${i + 1}:</label>
+                    <input type="text" name="subject_names[]" placeholder="Enter Subject Name" required>
+                `;
+                container.appendChild(div);
+            }
+        }
+    </script>
+    <footer class="footer">
+        <p>&copy; 2025 MIC College of Technology. All Rights Reserved.</p>
+        <p>Website: <a href="http://www.mictech.edu.in" target="_blank">www.mictech.edu.in</a></p>
+    </footer>
+</body>
+</html>

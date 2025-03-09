@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloading...</title>
+    <script>
+        function triggerDownload(url) {
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        window.onload = function() {
+            console.log("Starting downloads...");
+            triggerDownload("{{ url_for('download_attendance') }}");
+
+            setTimeout(function() {
+                triggerDownload("{{ url_for('download_pdf') }}");
+            }, 3000);
+
+            setTimeout(function() {
+                triggerDownload("{{ url_for('download_room_pdf') }}");
+            }, 5000);
+
+            setTimeout(function() {
+                window.location.href = "{{ url_for('dept_room_pdf') }}";
+            }, 7000);
+
+            setTimeout(function() {
+                window.location.href = "{{ url_for('seating_plan') }}";
+            }, 9000);
+        };
+    </script>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #000;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header, .footer {
+    width: 100%;
+    background: white;
+    padding: 15px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 3px solid #003366;
+}
+.logo{
+    margin-left: 110px;
+    display: flex;
+    align-items: center;
+}
+.logo img {
+            height: 180px;
+        }
+
+.college-info {
+    flex-grow: 1;
+    text-align: center;
+    margin-left: -90px;
+    margin-right: -90px;
+}
+.college-info h1,h2,h3,p {
+    margin: 5px 0;
+}
+.college-info h1 { color: #2a4270; }
+.college-info h2 { color: #e01f1f; }
+.college-info h3 { color: #000; }
+.accreditation {
+            margin-right: 110px;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+}
+.accreditation img {
+            height: 180px;
+            margin: 5px 0;
+        }
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* 🔄 Loading Spinner */
+.loader {
+    border: 6px solid rgba(0, 0, 0, 0.2);
+    border-top: 6px solid #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-top: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.footer {
+    border-top: 3px solid #003366;
+    color: #007BFF;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="MIC College Logo">
+        </div>
+        <div class="college-info">
+            <h2>DVR & Dr. HS</h2>
+            <h1>MIC College of Technology</h1>
+            <h3>AUTONOMOUS</h3>
+            <p>ISO 9001:2015 Certified Institute</p>
+            <p>(Approved by AICTE & Permanently Affiliated to JNTUK, Kakinada)</p>
+            <p>Kanchikacherla-521180, NTR Dist., A.P., India</p>
+            <p>Phone: 08678-273535 / 94914 57799 / 73826 16824</p>
+            <p>Email: office@mict.ac.in, Website: www.mictech.edu.in</p>
+        </div>
+        <div class="accreditation">
+            <img src="{{ url_for('static', filename='images/naac.png') }}" alt="NAAC Accreditation">
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h2>Downloading Attendance Sheets and Department-Wise Seating Plan</h2>
+        <p>Please do not refresh the page.</p>
+        <p>You will be redirected to the seating plan shortly...</p>
+        <div class="loader"></div> <!-- 🔄 Spinning Loader -->
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 MIC College of Technology. All Rights Reserved.</p>
+        <p>Website: <a href="http://www.mictech.edu.in" target="_blank">www.mictech.edu.in</a></p>
+    </footer>
+</body>
+
+
+</html>

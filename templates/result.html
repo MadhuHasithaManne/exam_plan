@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seating Plan Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+            padding: 0;
+            /* justify-content: center;
+            text-align: center; */
+        }
+        .line-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .exam-details-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+       
+    }
+
+    .exam-details-left {
+    width: 50%;
+    text-align: left; /* Ensures left alignment */
+    }
+
+    .exam-details-right {
+        width: 25%; /* Reduce width so it moves right */
+        text-align: justify; /* Align text to the right */
+    }
+
+    .exam-details-left p, .exam-details-right p {
+        margin: 10px 0;
+        font-size: 16px;
+        font-weight: bold;
+        
+    }
+
+        h1{text-align: center;}
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; color: #333; }
+        button { width: 100%; background-color: #007bff; color: #fff; border: none; padding: 10px; margin-top: 10px; }
+        button:hover { background-color: #0056b3; }
+        @media print {  @page { size: A4; margin: 0;
+    } .page-break { page-break-before: always; }}
+    @media print {
+    #generateBtn {
+        display: none; /* Hide the button when printing */
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1><i class="fas fa-chair"></i> Seating Plan Result</h1>
+    
+        <button id="transformBtn" onclick="transformTables()">Transform Tables (6 Rows × 8 Columns per Room)</button>
+    
+        <div id="seating-container">
+            {% for room in rooms %}
+            <div class="room" id="room-{{ room.room_number }}">
+                <h2>Room {{ room.room_number }}</h2>
+                <table class="seatingTable">
+                    <thead>
+                        <tr>
+                            <th>Side A</th>
+                            <th>Side B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in range(room.side_a|length) %}
+                        <tr>
+                            <td>{{ room.side_a[i][1] }}</td>
+                            <td>{{ room.side_b[i][1] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+            <!-- Generate Attendance Sheets Button -->
+        <form action="{{ url_for('generate_attendance_sheets') }}" method="GET">
+            <button id="generateBtn"><i class="fas fa-file-alt"></i> Generate Attendance Sheets</button>
+        </form>
+            
+        </div>
+        <div id="examDetails" 
+        exam-type="{{ exam_type }}" 
+        exam-date="{{ date }}" 
+        college_code="{{ college_code }}">
+    </div>
+    
+
+    </div>
+    
+    <script>
+        function transformTables() {
+            let rooms = document.querySelectorAll(".room");
+            let main = document.querySelector("h1");
+            main.innerHTML = "";
+            document.getElementById("transformBtn").style.visibility = "hidden";
+            let examType = document.getElementById("examDetails").getAttribute("exam-type");
+            let examDate = document.getElementById("examDetails").getAttribute("exam-date");
+            let code = document.getElementById("examDetails").getAttribute("college_code");
+    
+            rooms.forEach((room, tableIndex) => {
+                let table = room.querySelector(".seatingTable");
+                let rows = Array.from(table.rows).slice(1); // Skip header
+    
+                let sideA = [];
+                let sideB = [];
+    
+                // Extract values from the table
+                rows.forEach(row => {
+                    let cells = row.cells;
+                    sideA.push(cells[0].innerHTML.trim()); // Trim to remove spaces
+                    sideB.push(cells[1].innerHTML.trim());
+                });
+    
+                // Split into 4 equal parts
+                let quarter = Math.floor(sideA.length / 4);
+                let sideA1 = sideA.slice(0, quarter);
+                let sideA2 = sideA.slice(quarter, quarter * 2);
+                let sideA3 = sideA.slice(quarter * 2, quarter * 3);
+                let sideA4 = sideA.slice(quarter * 3);
+    
+                let sideB1 = sideB.slice(0, quarter);
+                let sideB2 = sideB.slice(quarter, quarter * 2);
+                let sideB3 = sideB.slice(quarter * 2, quarter * 3);
+                let sideB4 = sideB.slice(quarter * 3);
+                document.querySelector("h2").innerHTML = "";
+                // Clear existing table
+                table.innerHTML = "";
+                let hea = room.querySelector("h2");
+                hea.innerHTML = "";
+
+                let headerImageHTML = `
+            <div class="page-break" style="text-align: center; margin-bottom: 10px;">
+                <img src="{{ url_for('static', filename='images/header.jpg') }}" alt="Header Image" style="width: 100%; max-height: 180px;">
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <h1 style="text-align: center; text-decoration: underline; font-size: 28px; font-weight: bold;">
+                    SEATING ARRANGEMENT
+                </h1>
+            </div>
+            <div class="exam-details-container">
+                <!-- Left side: Date, Exam Type, Room Number -->
+                <div class="exam-details-left">
+                    <p><strong>Date of Examination  :  </strong>${examDate}</p>
+                    <p><strong>Exam Hall No  :  </strong>${room.id.split('-')[1]}</p>
+                    <p><strong>Examination  :  </strong>${examType}</p>
+                </div>
+            
+                <!-- Right side: Subject, College Code -->
+                <div class="exam-details-right">
+                    <p><strong>College Code  :  </strong>${code}</p>
+                    <p><strong>Subject  :  </strong></p>
+                </div>
+            </div>
+        `;
+                table.insertAdjacentHTML("beforebegin", headerImageHTML);
+    
+                // Create new header row
+                let headerRow = table.insertRow();
+                let headers = ["  ", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"];
+                headers.forEach(text => {
+                    let th = document.createElement("th");
+                    th.innerHTML = text;
+                    headerRow.appendChild(th);
+                });
+    
+                // Create new rows
+                let emptyCellCount = 0;
+    
+                for (let i = 0; i < quarter; i++) {
+                    let newRow = table.insertRow();
+                    newRow.insertCell().innerHTML = i + 1; // Table numbering (1,2,3,4,5,6)
+    
+                    let cells = [
+                        sideA1[i], sideB1[i],
+                        sideA2[i], sideB2[i],
+                        sideA3[i], sideB3[i],
+                        sideA4[i], sideB4[i]
+                    ];
+    
+                    cells.forEach(value => {
+                        let cell = newRow.insertCell();
+                        cell.innerHTML = value;
+                        // Convert value to string and trim it to prevent format mismatches
+                        let cleanValue = String(value).trim();
+                        if (cleanValue === "-") {
+                            emptyCellCount++;
+                        }
+                    });
+                }
+
+    
+                // Insert Footer
+                let footerHTML = `
+                <h3>No.of Candidates Registered : ${48-emptyCellCount}</h3>
+                <h3>No.of Candidates Present : </h3>
+                <h3>No.of Candidates Absent : </h3>
+                <br><br>
+                <div class="line-container">
+        <span>Invigilator1</span>
+        <span>Invigilator2</span>
+        <span>Chief Superintendent</span>
+    </div>
+    <br><br><br><br>
+                
+        `;
+
+                table.insertAdjacentHTML("afterend", footerHTML);
+
+                document.querySelector("h2").innerHTML = "";
+            });
+            document.querySelector("h2").innerHTML = "";
+            document.getElementById("transformBtn").disabled = true;
+        }
+    </script>       
+    
+    </body>
+    </html>

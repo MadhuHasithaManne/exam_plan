@@ -1,0 +1,12 @@
+Flask
+Flask-Session
+gunicorn
+pandas
+xlsxwriter
+openpyxl
+zipfile36
+reportlab
+shutil
+platform
+subprocess-run
+pywin32 ; sys_platform == 'win32'
