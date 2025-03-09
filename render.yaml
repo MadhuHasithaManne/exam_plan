@@ -3,17 +3,18 @@ services:
     name: flask-app
     runtime: docker
     env: python
-<<<<<<< HEAD
     buildCommand: |
       sudo apt-get update
       sudo apt-get install -y libreoffice
       pip install --upgrade pip
       pip install -r requirements.txt
-=======
     buildCommand: ""
     dockerfilePath: Dockerfile
->>>>>>> 7121b00 (Added Dockerfile and Render deployment config)
     startCommand: "gunicorn app:app"
     plan: free
     autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 5000
 
