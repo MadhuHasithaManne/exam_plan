@@ -22,6 +22,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # ✅ Copy the entire project files into the container
 COPY . .  
+RUN which soffice
 
 # ✅ Expose the correct port (Render dynamically assigns a port)
 EXPOSE 10000  
