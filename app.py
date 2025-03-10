@@ -36,6 +36,9 @@ count=0
 college_code="H7"
 HEADER_IMAGE_PATH = "E:\paid_projects\exam_seating_system\static\Images\header.jpg"
 OUTPUT_DIR = os.path.join(os.getcwd(), 'static', 'output_files')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_DIR = os.path.join(BASE_DIR, "static", "images")
+HEADER_IMAGE_PATH = os.path.join(STATIC_DIR, "header.jpg")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Pass Python's zip function to Jinja2 templates
