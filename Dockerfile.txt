@@ -1,31 +1,31 @@
-# ✅ Use an official slim Python image
+# ✅ Use an official Python image as base
 FROM python:3.11-slim  
 
-# ✅ Set working directory
+# ✅ Set the working directory inside the container
 WORKDIR /app
 
+# ✅ Debug: Print system info
+RUN echo "Starting Docker Build..." && uname -a && lsb_release -a
+
 # ✅ Install system dependencies (LibreOffice for PDF generation)
-RUN apt-get update && \
-    apt-get install -y libreoffice && \
+RUN apt-get update && apt-get install -y libreoffice libreoffice-writer && \
+    echo "LibreOffice Installed Successfully!" && \
     rm -rf /var/lib/apt/lists/*
 
-# ✅ Set environment variables to prevent locale errors
-ENV LANG=C.UTF-8 \
-    LC_ALL=C.UTF-8 \
-    DEBIAN_FRONTEND=noninteractive 
+# ✅ Debug: Check LibreOffice installation
+RUN which soffice && soffice --version || echo "LibreOffice is NOT installed correctly!"
 
-# ✅ Copy only requirements.txt first (caching layer optimization)
-COPY requirements.txt .  
+# ✅ Copy only requirements.txt first for efficient caching
+COPY requirements.txt .
 
 # ✅ Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt  
+RUN pip install --no-cache-dir -r requirements.txt
 
 # ✅ Copy the entire project files into the container
-COPY . .  
-RUN which soffice
+COPY . .
 
-# ✅ Expose the correct port (Render dynamically assigns a port)
-EXPOSE 10000  
+# ✅ Expose the Flask port (default: 5000, Render expects: 10000)
+EXPOSE 10000
 
-# ✅ Set the command to run the application with correct timeout and workers
-CMD gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120 --workers 3
+# ✅ Set the default command to run the app
+CMD ["gunicorn", "app:app", "--timeout", "120", "--workers", "3"]
