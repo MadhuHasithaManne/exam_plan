@@ -775,13 +775,17 @@ def get_seating_plan():
 @app.route("/download_pdf")
 def download_pdf():
     try:
+        if os.path.exists("calibri.ttf"):
+            font_path = "calibri.ttf"
+        elif os.path.exists("/usr/share/fonts/truetype/calibri.ttf"):
+            font_path = "/usr/share/fonts/truetype/calibri.ttf"
         date=session.get("date")
         exam_session=session.get("exam_session")
         seating_plan, room_plan,dept_plan = get_seating_plan()
         if not seating_plan:
             return "Error: Seating plan could not be generated.", 500
-        pdfmetrics.registerFont(TTFont("Calibri", "calibri.ttf"))  # Use "times.ttf" if available
-
+        pdfmetrics.registerFont(TTFont("Calibri", font_path))  # Use "times.ttf" if available
+        #pdfmetrics.registerFont(TTFont('Calibri', '/usr/share/fonts/truetype/calibri.ttf'))
         # **Create Custom Styles with Times New Roman**
         styles = getSampleStyleSheet()
         times_normal = ParagraphStyle(
@@ -872,9 +876,13 @@ def download_pdf():
 @app.route("/download_room_pdf")
 def download_room_pdf():
     try:
+        if os.path.exists("calibri.ttf"):
+            font_path = "calibri.ttf"
+        elif os.path.exists("/usr/share/fonts/truetype/calibri.ttf"):
+            font_path = "/usr/share/fonts/truetype/calibri.ttf"
         date=session.get("date")
         exam_session=session.get("exam_session")
-        pdfmetrics.registerFont(TTFont("Calibri", "calibri.ttf"))  # Use "times.ttf" if available
+        pdfmetrics.registerFont(TTFont("Calibri", font_path))  # Use "times.ttf" if available
 
         # **Create Custom Styles with Times New Roman**
         styles = getSampleStyleSheet()
@@ -972,11 +980,15 @@ def download_room_pdf():
 @app.route("/dept_room_pdf")
 def dept_room_pdf():
     try:
+        if os.path.exists("calibri.ttf"):
+            font_path = "calibri.ttf"
+        elif os.path.exists("/usr/share/fonts/truetype/calibri.ttf"):
+            font_path = "/usr/share/fonts/truetype/calibri.ttf"
         date = session.get("date")
         exam_session = session.get("exam_session")
 
         # ✅ Register Calibri Font
-        pdfmetrics.registerFont(TTFont("Calibri", "calibri.ttf"))
+        pdfmetrics.registerFont(TTFont("Calibri", font_path))
 
         # ✅ Define Styles
         styles = getSampleStyleSheet()
