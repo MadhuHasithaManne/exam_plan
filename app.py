@@ -34,7 +34,7 @@ app.secret_key = "supersecretkey12345"  # Mandatory for session handling
 LATEST_ATTENDANCE_DIR = None
 count=0
 college_code="H7"
-HEADER_IMAGE_PATH = "E:\paid_projects\exam_seating_system\static\Images\header.jpg"
+# HEADER_IMAGE_PATH = "E:\paid_projects\exam_seating_system\static\Images\header.jpg"
 OUTPUT_DIR = os.path.join(os.getcwd(), 'static', 'output_files')
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_DIR = os.path.join(BASE_DIR, "static", "images")
@@ -425,7 +425,7 @@ def generate_attendance_sheets():
                     worksheet = writer.sheets[sheet_name]
                     for row in range(4):  
                         worksheet.set_row(row, 20) 
-                    worksheet.insert_image('A1', 'static/images/header.jpg', {
+                    worksheet.insert_image('A1', 'HEADER_IMAGE_PATH', {
                     'x_scale': 0.5,  # Adjust width scale to fit A1:D4
                     'y_scale': 0.3,  # Adjust height scale to fit A1:A4
                     'object_position': 1  # Ensures it moves with cells but does not resize beyond them
