@@ -772,72 +772,49 @@ def get_seating_plan():
                 print(f"Error processing file {filename}: {e}")
 
     return seating_plan,room_plan,dept_plan
-
-
 @app.route("/download_pdf")
 def download_pdf():
     try:
-        if os.path.exists("calibri.ttf"):
-            font_path = "calibri.ttf"
-        elif os.path.exists("/usr/share/fonts/truetype/calibri.ttf"):
-            font_path = "/usr/share/fonts/truetype/calibri.ttf"
-        date=session.get("date")
-        exam_session=session.get("exam_session")
-        image=session.get("image")
-        seating_plan, room_plan,dept_plan = get_seating_plan()
+        date = session.get("date")
+        exam_session = session.get("exam_session")
+        image = session.get("image")
+        seating_plan, room_plan, dept_plan = get_seating_plan()
+
         if not seating_plan:
             return "Error: Seating plan could not be generated.", 500
-        pdfmetrics.registerFont(TTFont("Calibri", font_path))  # Use "times.ttf" if available
-        #pdfmetrics.registerFont(TTFont('Calibri', '/usr/share/fonts/truetype/calibri.ttf'))
-        # **Create Custom Styles with Times New Roman**
-        styles = getSampleStyleSheet()
-        times_normal = ParagraphStyle(
-            "CalibriNormal",
-            parent=styles["Normal"],
-            fontName="Calibri",
-            fontSize=12
-        )
 
-        times_heading = ParagraphStyle(
-            "CalibriNormal",
-            parent=styles["Heading3"],
-            fontName="Calibri",
-            fontSize=14,
-            spaceAfter=10
-        )
         buffer = BytesIO()
         doc = SimpleDocTemplate(buffer, pagesize=A4, topMargin=60)
         elements = []
         styles = getSampleStyleSheet()
-        
+
+        normal_style = styles["Normal"]  # ✅ Default font
+        heading_style = styles["Heading3"]  # ✅ Default heading font
 
         for department, details in seating_plan.items():
-            rooms = details["rooms"]  # ✅ Extract room details
+            rooms = details["rooms"]
             subject_code = set(room["subject_code"] for room in rooms)
             subject_name = set(room["subject_name"] for room in rooms)
             subject_codes_str = ", ".join(subject_code) if subject_code else "Not Available"
             subject_names_str = ", ".join(subject_name) if subject_name else "Not Available"
+
             header_img = Image(image, width=500, height=120)  
             elements.append(header_img)
             
-            left_details = Paragraph(f"<b>Department:</b> {department}<br/><b>Subject:</b> {subject_names_str}<br/><b>Code:</b> {subject_codes_str}", times_normal)
-            right_details = Paragraph(f"<b>Date:</b> {date}<br/><b>Session:</b> {exam_session}", times_normal)
+            left_details = Paragraph(f"<b>Department:</b> {department}<br/><b>Subject:</b> {subject_names_str}<br/><b>Code:</b> {subject_codes_str}", normal_style)
+            right_details = Paragraph(f"<b>Date:</b> {date}<br/><b>Session:</b> {exam_session}", normal_style)
 
-            # ✅ Create a two-column table for details
-            details_table = Table([[left_details, right_details]], colWidths=[300, 130])  # Adjust width as needed
+            details_table = Table([[left_details, right_details]], colWidths=[300, 130])
 
-            # ✅ Apply styles
             details_table.setStyle(TableStyle([
-                ('ALIGN', (0, 0), (0, -1), 'LEFT'),  # Left details aligned left
-                ('ALIGN', (1, 0), (1, -1), 'RIGHT'),  # Right details aligned right
-                ('VALIGN', (0, 0), (-1, -1), 'TOP'),  # Align text to top
-                ('BOTTOMPADDING', (0, 0), (-1, -1), 5),  # Padding
+                ('ALIGN', (0, 0), (0, -1), 'LEFT'),
+                ('ALIGN', (1, 0), (1, -1), 'RIGHT'),
+                ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+                ('BOTTOMPADDING', (0, 0), (-1, -1), 5),
             ]))
 
-            # ✅ Add to elements
             elements.append(details_table)
             elements.append(Spacer(1, 0.2 * inch))
-
 
             data = [["Room Number", "FROM", "TO"]]
 
@@ -861,7 +838,7 @@ def download_pdf():
             return "Error: No data available for the PDF.", 500
 
         doc.build(elements)
-        buffer.seek(0)  # Reset buffer
+        buffer.seek(0)
 
         print("✅ PDF successfully generated!")
 
@@ -875,36 +852,119 @@ def download_pdf():
     except Exception as e:
         print(f"❌ Error generating PDF: {e}")
         return "Error generating PDF.", 500
+
+
+# def download_pdf():
+#     try:
+#         if os.path.exists("calibri.ttf"):
+#             font_path = "calibri.ttf"
+#         elif os.path.exists("/usr/share/fonts/truetype/calibri.ttf"):
+#             font_path = "/usr/share/fonts/truetype/calibri.ttf"
+#         date=session.get("date")
+#         exam_session=session.get("exam_session")
+#         image=session.get("image")
+#         seating_plan, room_plan,dept_plan = get_seating_plan()
+#         if not seating_plan:
+#             return "Error: Seating plan could not be generated.", 500
+#         pdfmetrics.registerFont(TTFont("Calibri", font_path))  # Use "times.ttf" if available
+#         #pdfmetrics.registerFont(TTFont('Calibri', '/usr/share/fonts/truetype/calibri.ttf'))
+#         # **Create Custom Styles with Times New Roman**
+#         styles = getSampleStyleSheet()
+#         times_normal = ParagraphStyle(
+#             "CalibriNormal",
+#             parent=styles["Normal"],
+#             fontName="Calibri",
+#             fontSize=12
+#         )
+
+#         times_heading = ParagraphStyle(
+#             "CalibriNormal",
+#             parent=styles["Heading3"],
+#             fontName="Calibri",
+#             fontSize=14,
+#             spaceAfter=10
+#         )
+#         buffer = BytesIO()
+#         doc = SimpleDocTemplate(buffer, pagesize=A4, topMargin=60)
+#         elements = []
+#         styles = getSampleStyleSheet()
+        
+
+#         for department, details in seating_plan.items():
+#             rooms = details["rooms"]  # ✅ Extract room details
+#             subject_code = set(room["subject_code"] for room in rooms)
+#             subject_name = set(room["subject_name"] for room in rooms)
+#             subject_codes_str = ", ".join(subject_code) if subject_code else "Not Available"
+#             subject_names_str = ", ".join(subject_name) if subject_name else "Not Available"
+#             header_img = Image(image, width=500, height=120)  
+#             elements.append(header_img)
+            
+#             left_details = Paragraph(f"<b>Department:</b> {department}<br/><b>Subject:</b> {subject_names_str}<br/><b>Code:</b> {subject_codes_str}", times_normal)
+#             right_details = Paragraph(f"<b>Date:</b> {date}<br/><b>Session:</b> {exam_session}", times_normal)
+
+#             # ✅ Create a two-column table for details
+#             details_table = Table([[left_details, right_details]], colWidths=[300, 130])  # Adjust width as needed
+
+#             # ✅ Apply styles
+#             details_table.setStyle(TableStyle([
+#                 ('ALIGN', (0, 0), (0, -1), 'LEFT'),  # Left details aligned left
+#                 ('ALIGN', (1, 0), (1, -1), 'RIGHT'),  # Right details aligned right
+#                 ('VALIGN', (0, 0), (-1, -1), 'TOP'),  # Align text to top
+#                 ('BOTTOMPADDING', (0, 0), (-1, -1), 5),  # Padding
+#             ]))
+
+#             # ✅ Add to elements
+#             elements.append(details_table)
+#             elements.append(Spacer(1, 0.2 * inch))
+
+
+#             data = [["Room Number", "FROM", "TO"]]
+
+#             for room in sorted(rooms, key=lambda x: x["Room"]):
+#                 data.append([room["Room"], room["First Roll"], room["Last Roll"]])
+
+#             table = Table(data, colWidths=[150, 150, 150])
+#             table.setStyle(TableStyle([
+#                 ("BACKGROUND", (0, 0), (-1, 0), colors.grey),
+#                 ("TEXTCOLOR", (0, 0), (-1, 0), colors.whitesmoke),
+#                 ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+#                 ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+#                 ("BOTTOMPADDING", (0, 0), (-1, 0), 10),
+#                 ("GRID", (0, 0), (-1, -1), 1, colors.black),
+#             ]))
+
+#             elements.append(table)
+#             elements.append(PageBreak())
+
+#         if not elements:
+#             return "Error: No data available for the PDF.", 500
+
+#         doc.build(elements)
+#         buffer.seek(0)  # Reset buffer
+
+#         print("✅ PDF successfully generated!")
+
+#         return send_file(
+#             buffer,
+#             as_attachment=True,
+#             download_name="Seating_Plan.pdf",
+#             mimetype="application/pdf"
+#         )
+
+#     except Exception as e:
+#         print(f"❌ Error generating PDF: {e}")
+#         return "Error generating PDF.", 500
     
 @app.route("/download_room_pdf")
 def download_room_pdf():
     try:
-        if os.path.exists("calibri.ttf"):
-            font_path = "calibri.ttf"
-        elif os.path.exists("/usr/share/fonts/truetype/calibri.ttf"):
-            font_path = "/usr/share/fonts/truetype/calibri.ttf"
         date=session.get("date")
         exam_session=session.get("exam_session")
         image=session.get("image")
-        pdfmetrics.registerFont(TTFont("Calibri", font_path))  # Use "times.ttf" if available
 
         # **Create Custom Styles with Times New Roman**
         styles = getSampleStyleSheet()
-        times_normal = ParagraphStyle(
-            "CalibriNormal",
-            parent=styles["Normal"],
-            fontName="Calibri",
-            fontSize=12
-        )
-
-        times_heading = ParagraphStyle(
-            "CalibriNormal",
-            parent=styles["Heading3"],
-            fontName="Calibri",
-            fontSize=14,
-            spaceAfter=10
-        )
-        # Fetch room-wise plan
+        
         seating_plan, room_plan,dept_plan = get_seating_plan()
         if not room_plan:
             return "Error: Seating plan could not be generated.", 500
@@ -916,12 +976,13 @@ def download_room_pdf():
         # Styles
         styles = getSampleStyleSheet()
       
-        normal_style = styles["Normal"]
+        normal_style = styles["Normal"]  # ✅ Default font
+        heading_style = styles["Heading3"]  
         header_img = Image(image, width=500, height=120)  
         elements.append(header_img)
 
-        date_paragraph = Paragraph(f"<b>Date:</b> {date}", times_normal)  
-        session_paragraph = Paragraph(f"<b>Session:</b> {exam_session}", times_normal)
+        date_paragraph = Paragraph(f"<b>Date:</b> {date}", normal_style)  
+        session_paragraph = Paragraph(f"<b>Session:</b> {exam_session}", normal_style)
 
         # ✅ Create a Two-Column Table for Alignment
         date_session_table = Table([[date_paragraph, session_paragraph]], colWidths=[250, 150])  # Adjust column width
@@ -984,32 +1045,16 @@ def download_room_pdf():
 @app.route("/dept_room_pdf")
 def dept_room_pdf():
     try:
-        if os.path.exists("calibri.ttf"):
-            font_path = "calibri.ttf"
-        elif os.path.exists("/usr/share/fonts/truetype/calibri.ttf"):
-            font_path = "/usr/share/fonts/truetype/calibri.ttf"
         date = session.get("date")
         exam_session = session.get("exam_session")
         image=session.get("image")
-
+        print(image)
         # ✅ Register Calibri Font
-        pdfmetrics.registerFont(TTFont("Calibri", font_path))
 
         # ✅ Define Styles
         styles = getSampleStyleSheet()
-        times_normal = ParagraphStyle(
-            "CalibriNormal",
-            parent=styles["Normal"],
-            fontName="Calibri",
-            fontSize=12
-        )
-        times_heading = ParagraphStyle(
-            "CalibriHeading",
-            parent=styles["Heading3"],
-            fontName="Calibri",
-            fontSize=14,
-            spaceAfter=10
-        )
+        normal_style = styles["Normal"]  # ✅ Default font
+        heading_style = styles["Heading3"]  
 
         # ✅ Fetch the room-wise plan
         seating_plan, room_plan, dept_plan = get_seating_plan()
@@ -1028,8 +1073,8 @@ def dept_room_pdf():
 
             # ✅ Create Date & Session Table (Aligned Left & Right)
             date_session_table = Table(
-                [[Paragraph(f"<b>Date:</b> {date}", times_normal)], 
-                [Paragraph(f"<b>Session:</b> {exam_session}", times_normal)]], 
+                [[Paragraph(f"<b>Date:</b> {date}", normal_style)], 
+                [Paragraph(f"<b>Session:</b> {exam_session}", normal_style)]], 
                 colWidths=[400]  # Adjust width as needed
             )
 
@@ -1043,7 +1088,7 @@ def dept_room_pdf():
             elements.append(Spacer(1, 0.2 * inch))  
 
             # ✅ Room Title
-            elements.append(Paragraph(f"<b>Room: {room}</b>", times_heading))
+            elements.append(Paragraph(f"<b>Room: {room}</b>", heading_style))
             elements.append(Spacer(1, 0.1 * inch))
 
             # ✅ Table Headers
@@ -1056,9 +1101,9 @@ def dept_room_pdf():
                 to_roll = dept["To"]
 
                 data.append([
-                    Paragraph(department_name, times_normal), 
-                    Paragraph(from_roll, times_normal), 
-                    Paragraph(to_roll, times_normal)
+                    Paragraph(department_name, normal_style), 
+                    Paragraph(from_roll, normal_style), 
+                    Paragraph(to_roll, normal_style)
                 ])
 
             # ✅ Create Table with Auto-Adjusting Row Heights
