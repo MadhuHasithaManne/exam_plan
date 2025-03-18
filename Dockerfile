@@ -36,4 +36,4 @@ RUN echo "📂 Project Files:" && ls -l /app
 EXPOSE 10000
 
 # ✅ Set the default command to run the app
-CMD ["gunicorn", "app:app", "--timeout", "300", "--workers", "1"]
+CMD ["gunicorn", "app:app", "--timeout", "1000", "--workers", "1"]
