@@ -40,7 +40,10 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_DIR = os.path.join(BASE_DIR, "static", "images")
 HEADER_IMAGE_PATH = os.path.join(STATIC_DIR, "header.jpg")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-
+for foldername, subfolders, filenames in os.walk(BASE_DIR):
+        for filename in filenames:
+            file_path = os.path.join(foldername, filename)
+            print(file_path)
 # Pass Python's zip function to Jinja2 templates
 app.jinja_env.globals.update(zip=zip)
 
