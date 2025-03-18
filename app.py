@@ -37,7 +37,7 @@ college_code="H7"
 # HEADER_IMAGE_PATH = "E:\paid_projects\exam_seating_system\static\Images\header.jpg"
 OUTPUT_DIR = os.path.join(os.getcwd(), 'static', 'output_files')
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_DIR = os.path.join(BASE_DIR, "static", "images")
+STATIC_DIR = os.path.join(BASE_DIR, "static", "Images")
 HEADER_IMAGE_PATH = os.path.join(STATIC_DIR, "header.jpg")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 for foldername, subfolders, filenames in os.walk(BASE_DIR):
