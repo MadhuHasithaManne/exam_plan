@@ -106,6 +106,7 @@ def index():
             session["exam_session"]=exam_session
             session["exam_type"]=exam_type
             session["room_names"]=room_names
+            session["image"]=HEADER_IMAGE_PATH
 
             print("Input validation successful and data stored.")
             return render_template("index.html", buttons_visible=True)
@@ -391,9 +392,9 @@ def generate_attendance_sheets():
         exam_type=session.get("exam_type")
         exam_session=session.get("exam_session")
         department_subject_map = session.get("department_subject_map")
+        image=session.get("image")
         sub_code_name_map=session.get("sub_code_name_map")
         roll_name_dict = getattr(g, "large_data", {})
-        # delete_contents(output_dir)
         output_dir = os.path.join(OUTPUT_DIR, "attendance_sheets")
         os.makedirs(output_dir, exist_ok=True)
         for room in rooms:
@@ -425,7 +426,7 @@ def generate_attendance_sheets():
                     worksheet = writer.sheets[sheet_name]
                     for row in range(4):  
                         worksheet.set_row(row, 20) 
-                    worksheet.insert_image('A1', 'HEADER_IMAGE_PATH', {
+                    worksheet.insert_image('A1', 'image', {
                     'x_scale': 0.5,  # Adjust width scale to fit A1:D4
                     'y_scale': 0.3,  # Adjust height scale to fit A1:A4
                     'object_position': 1  # Ensures it moves with cells but does not resize beyond them
@@ -698,6 +699,7 @@ def get_seating_plan():
     exam_session=session.get("exam_session")
     room_names=session.get("room_names")
     department_subject_map = session.get("department_subject_map")
+    image=session.get("image")
     sub_code_name_map=session.get("sub_code_name_map")
     if not LATEST_ATTENDANCE_DIR:
         print("Error: No latest attendance sheet directory found.")
@@ -781,6 +783,7 @@ def download_pdf():
             font_path = "/usr/share/fonts/truetype/calibri.ttf"
         date=session.get("date")
         exam_session=session.get("exam_session")
+        image=session.get("image")
         seating_plan, room_plan,dept_plan = get_seating_plan()
         if not seating_plan:
             return "Error: Seating plan could not be generated.", 500
@@ -814,7 +817,7 @@ def download_pdf():
             subject_name = set(room["subject_name"] for room in rooms)
             subject_codes_str = ", ".join(subject_code) if subject_code else "Not Available"
             subject_names_str = ", ".join(subject_name) if subject_name else "Not Available"
-            header_img = Image(HEADER_IMAGE_PATH, width=500, height=120)  
+            header_img = Image(image, width=500, height=120)  
             elements.append(header_img)
             
             left_details = Paragraph(f"<b>Department:</b> {department}<br/><b>Subject:</b> {subject_names_str}<br/><b>Code:</b> {subject_codes_str}", times_normal)
@@ -882,6 +885,7 @@ def download_room_pdf():
             font_path = "/usr/share/fonts/truetype/calibri.ttf"
         date=session.get("date")
         exam_session=session.get("exam_session")
+        image=session.get("image")
         pdfmetrics.registerFont(TTFont("Calibri", font_path))  # Use "times.ttf" if available
 
         # **Create Custom Styles with Times New Roman**
@@ -913,7 +917,7 @@ def download_room_pdf():
         styles = getSampleStyleSheet()
       
         normal_style = styles["Normal"]
-        header_img = Image(HEADER_IMAGE_PATH, width=500, height=120)  
+        header_img = Image(image, width=500, height=120)  
         elements.append(header_img)
 
         date_paragraph = Paragraph(f"<b>Date:</b> {date}", times_normal)  
@@ -986,6 +990,7 @@ def dept_room_pdf():
             font_path = "/usr/share/fonts/truetype/calibri.ttf"
         date = session.get("date")
         exam_session = session.get("exam_session")
+        image=session.get("image")
 
         # ✅ Register Calibri Font
         pdfmetrics.registerFont(TTFont("Calibri", font_path))
@@ -1018,7 +1023,7 @@ def dept_room_pdf():
         # ✅ Process Each Room Separately
         for room, depts in dept_plan.items():
             # ✅ Add Header Image (if exists)
-            header_img = Image(HEADER_IMAGE_PATH, width=500, height=120)  
+            header_img = Image(image, width=500, height=120)  
             elements.append(header_img)
 
             # ✅ Create Date & Session Table (Aligned Left & Right)
