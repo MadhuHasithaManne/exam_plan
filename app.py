@@ -429,7 +429,7 @@ def generate_attendance_sheets():
                     worksheet = writer.sheets[sheet_name]
                     for row in range(4):  
                         worksheet.set_row(row, 20) 
-                    worksheet.insert_image('A1', 'image', {
+                    worksheet.insert_image('A1', image, {
                     'x_scale': 0.5,  # Adjust width scale to fit A1:D4
                     'y_scale': 0.3,  # Adjust height scale to fit A1:A4
                     'object_position': 1  # Ensures it moves with cells but does not resize beyond them
