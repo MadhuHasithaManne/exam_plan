@@ -22,6 +22,7 @@ COPY requirements.txt .
 
 # ✅ Install Python dependencies
 RUN echo "📦 Installing Python Dependencies..." && pip install --no-cache-dir -r requirements.txt
+RUN apt-get update && apt-get install -y ttf-mscorefonts-installer && fc-cache -fv
 
 # ✅ Copy the entire project files into the container
 COPY . .
