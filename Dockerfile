@@ -22,7 +22,9 @@ COPY requirements.txt .
 
 # ✅ Install Python dependencies
 RUN echo "📦 Installing Python Dependencies..." && pip install --no-cache-dir -r requirements.txt
-RUN apt-get update && apt-get install -y ttf-mscorefonts-installer && fc-cache -fv
+COPY calibri.ttf /usr/share/fonts/truetype/calibri.ttf
+RUN fc-cache -fv
+
 
 # ✅ Copy the entire project files into the container
 COPY . .
