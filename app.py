@@ -1061,6 +1061,7 @@ def dept_room_pdf():
 
         # ✅ Fetch the room-wise plan
         seating_plan, room_plan, dept_plan = get_seating_plan()
+        print("first",dept_plan)
         if not dept_plan:
             return "Error: Seating plan could not be generated.", 500
 
@@ -1130,7 +1131,9 @@ def dept_room_pdf():
         # ✅ Build PDF
         doc.build(elements)
         print("✅ Room-Wise Department Plan PDF Generated")
-        print(dept_plan)
+        print("1234")
+        
+        print("departments",dept_plan)
         buffer.seek(0)  # Reset buffer
         print("📂 Sending PDF File to Client...")
         return send_file(
