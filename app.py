@@ -1138,14 +1138,10 @@ def dept_room_pdf():
         print("📂 Sending PDF File to Client...")
         return send_file(
             buffer,
-            as_attachment=True,  # Forces download
+            as_attachment=True,
             download_name="Department_Plan.pdf",
-            mimetype="application/pdf",
-            etag=False,  # Disable caching issues
-            cache_timeout=0,  # Avoid cached responses
-            last_modified=None
+            mimetype="application/pdf"
         )
-
 
     except Exception as e:
         print(f"❌ Error generating PDF: {e}")
