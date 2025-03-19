@@ -1130,15 +1130,19 @@ def dept_room_pdf():
         # ✅ Build PDF
         doc.build(elements)
         print("✅ Room-Wise Department Plan PDF Generated")
-
+        print(dept_plan)
         buffer.seek(0)  # Reset buffer
-
+        print("📂 Sending PDF File to Client...")
         return send_file(
             buffer,
-            as_attachment=True,
+            as_attachment=True,  # Forces download
             download_name="Department_Plan.pdf",
-            mimetype="application/pdf"
+            mimetype="application/pdf",
+            etag=False,  # Disable caching issues
+            cache_timeout=0,  # Avoid cached responses
+            last_modified=None
         )
+
 
     except Exception as e:
         print(f"❌ Error generating PDF: {e}")
